@@ -1,0 +1,12 @@
+- provide :title, "Contact"
+%section#contact
+  %h2 Contact Me
+
+  %p Contact me via #{link_to 'email', 'mailto:me@mikakalathil.ca'}, or through Facebook/LinkedIn
+
+  #socialmedia-images
+    = link_to 'https://www.facebook.com/mika.kalathil', target: '_blank' do
+      = image_tag 'https://s3-us-west-2.amazonaws.com/mikaimages/Facebook.gif', alt: 'Facebook Logo', class: ''
+
+    = link_to 'http://ca.linkedin.com/in/mikakalathil', target: '_blank' do
+      = image_tag 'https://s3-us-west-2.amazonaws.com/mikaimages/LinkedIn.gif', alt: 'linkedin logo', class: ''

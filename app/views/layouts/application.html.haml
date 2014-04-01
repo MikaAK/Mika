@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %title #{ full_title(yield(:title))}
+    = stylesheet_link_tag    :application, :media => "all", "data-turbolinks-track" => true
+    = javascript_include_tag "data-turbolinks-track" => true
+    -#%link{ :rel => "stylesheet", :href => "http://basehold.it/24"}
+    = csrf_meta_tags
+    = favicon_link_tag('favicon.ico')
+    = render 'layouts/shim'
+  %body
+    .wrapper
+      %header
+        = render 'layouts/header'
+
+      = yield
+
+    %footer
+      = render 'layouts/footer'
+
+    / Load JavaScript Last For Page Speed
+    = javascript_include_tag :application, 'bootstrap.min'
+    = render 'layouts/analytics'

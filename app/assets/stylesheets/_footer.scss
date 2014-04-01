@@ -1,0 +1,81 @@
+/* Basic Footer Styles
+========================= */
+footer {
+  right: 0;
+  font-size: .5em;
+  color: #EEBE6B;
+  height: 13px;
+
+  a {
+    color: #EEBE6B;
+  }
+
+  a:hover {
+    color: #FFD58C;
+  }
+
+  ul {
+    margin-bottom: 0;
+    li {
+
+      display: inline-block;
+      position: relative;
+
+      &:first-child {
+
+      }
+
+      &:nth-of-type(2) {
+        position: absolute;
+        right: 0;
+      }
+      &:last-child{
+        position: absolute;
+        right: 0;
+        margin-right: 10em;
+      }
+
+      img {
+        position: absolute;
+        bottom: -2px;
+        right: -12%;
+      }
+    }
+  }
+
+
+  /* Mobile Exlusive Styles
+  ============================ */
+  @media screen and (max-width: 767px) {
+    img {
+      display: none;
+    }
+  }
+
+  /* Small Mobile to Smartphone
+  ================================ */
+  @media screen and (min-width: 480px){
+    li {
+      font-size: 1.5em;
+    }
+  }
+
+  /* Ipad to Desktop Styles
+  ============================ */
+  @media screen and (min-width: 768px) {
+
+  }
+
+  /* Desktop to LG Styles
+  ========================== */
+  @media screen and (min-width: 992px) {
+
+  }
+
+  /* LG > Styles
+  ================= */
+  @media screen and (min-width: 1200px) {
+
+  }
+}
+

@@ -1,0 +1,42 @@
+-provide :title, "Projects"
+%section.projects.body-section#home
+  %h2.section-heading Existing Projects
+
+
+  #section-container
+    - if @projects.count == 0
+      %p Currently all my existing projects are stored on #{link_to 'GitHub', 'https://github.com/Snowfiring', target: '_blank'}
+
+    - if @projects.count % 2 == 0
+      - @projects.each do |project|
+        .project-box
+          %h3.project-name #{project.name}
+
+          %article.project-description
+            %p.project-description #{project.description}
+
+          %p.project-year Creation Year: #{project.year}
+
+          = link_to 'GitHub', project.link, target: '_blank'
+    - else
+      - @projects.each do |project|
+        - if project == @projects.last
+          .project-box
+            %h3.project-name #{project.name}
+
+            %article.project-description
+              %p.project-description #{project.description}
+
+            %p.project-year Creation Year: #{project.year}
+
+            = link_to 'GitHub', project.link, target: '_blank'
+        - else
+          .project-box
+            %h3.project-name #{project.name}
+
+            %article.project-description
+              %p.project-description #{project.description}
+
+            %p.project-year Creation Year: #{project.year}
+
+            = link_to 'GitHub', project.link, target: '_blank'

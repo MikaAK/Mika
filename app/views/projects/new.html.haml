@@ -1,0 +1,22 @@
+- provide :title, "Add Project"
+%section.projects.body-section#new
+  %h2.section-heading Add Projects
+
+  = form_for @project do |f|
+    = render 'layouts/error_messages.html.haml'
+
+  = form_for @project, :html => {class: ''} do |f|
+
+    = f.label :name
+    = f.text_field :name, :placeholder => 'Project name'
+
+    = f.label :year
+    = f.text_field :year, :placeholder => 'Project year'
+
+    = f.label :description
+    = f.text_area :description, :rows => 4, :placeholder => 'Enter project description'
+
+    = f.label :link
+    = f.text_field :link, :placeholder => 'Project link'
+
+    = f.submit 'Add Project'

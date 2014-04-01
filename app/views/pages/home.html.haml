@@ -1,0 +1,50 @@
+- provide(:title, '')
+%section#home.pages
+  %h2
+    Web Developer/#{content_tag('wbr')}Software Developer
+    %br Freelancer
+
+  .box-selection
+    .current-projects
+      %h3
+        Current
+        %br Projects
+    .secret
+      %h3
+        The
+        %br Secret
+        %br Shop
+    .favorite
+      %h3
+        Favorite
+        %br Links
+
+  %ul.tab-selection
+    %li.active.current-projects
+      %a{ :href => '#current-projects', 'data-toggle' => 'tab' }
+        Current Projects
+    %li.secret
+      %a{ :href => '#secret', 'data-toggle' => 'tab' }
+        The Secret Shop
+    %li.favorite
+      %a{ :href => '#favorite', 'data-toggle' => 'tab' }
+        Favorite Links
+
+  .tab-content
+    #current-projects.tab-pane.active
+      %h3 Current Projects
+
+      .tab-text
+        %p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sagittis vehicula ante, quis feugiat turpis tincidunt hendrerit. In aliquam quam vel neque aliquet egestas. Suspendisse potenti. Donec vestibulum justo id velit tempus, in facilisis lectus rutrum. Etiam mollis felis sapien. Nunc id nisi ullamcorper, pulvinar mi non, vehicula nulla. Aenean posuere semper libero et semper.
+
+    #secret.tab-pane
+      %h3 Current Projects
+
+      .tab-text
+        %p In aliquam quam vel neque aliquet egestas. Suspendisse potenti. Donec vestibulum justo id velit tempus, in facilisis lectus rutrum. Etiam mollis felis sapien. Nunc id nisi ullamcorper, pulvinar mi non, vehicula nulla. Aenean posuere semper libero et semper.
+
+    #favorite.tab-pane
+      %h3 Current Projects
+
+      .tab-text
+        %p Pellentesque sagittis vehicula ante, quis feugiat turpis tincidunt hendrerit. Etiam mollis felis sapien. Suspendisse potenti. Donec vestibulum justo id velit tempus, in facilisis lectus rutrum.  Nunc id nisi ullamcorper, pulvinar mi non, vehicula nulla. Aenean posuere semper libero et semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit.

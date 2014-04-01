@@ -1,0 +1,22 @@
+.header-logo
+  %ul
+    %li
+      = image_tag('https://s3-us-west-2.amazonaws.com/mikaimages/Logo.png', :alt => 'Tree Logo', :id => 'main-logo')
+
+    %li
+      %h1 Mika Kalathil
+%nav
+  %ul
+    %li
+      =link_to 'Home', root_path, :class => is_active?('home')
+
+    %li
+      =link_to 'About', about_path, :class => is_active?('about')
+
+    %li
+      =link_to 'Projects', projects_path, :class => is_active?('index')
+
+    %li
+      =link_to 'Contact' , contact_path, :class => is_active?('contact')
+
+

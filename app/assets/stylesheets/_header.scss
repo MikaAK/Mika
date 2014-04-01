@@ -1,0 +1,138 @@
+/* Basic Header Styles
+  ======================= */
+header {
+  background-image: url('https://s3-us-west-2.amazonaws.com/mikaimages/noise.png'),
+              -moz-linear-gradient(to top, -7.25% 658.38% -90deg,rgba(121, 85, 48, 1) 0%,rgba(123, 87, 50, 1) 11.78%,rgba(128, 94, 59, 1) 33.26%,rgba(137, 105, 73, 1) 67.32%,rgba(150, 122, 93, 1) 100%);
+  background-image: url('https://s3-us-west-2.amazonaws.com/mikaimages/noise.png'),
+              -webkit-linear-gradient(to top, rgba(121, 85, 48, 1) 0%, rgba(123, 87, 50, 1) 11.78%, rgba(128, 94, 59, 1) 33.26%, rgba(137, 105, 73, 1) 67.32%, rgba(150, 122, 93, 1) 100%);
+  background-image: url('https://s3-us-west-2.amazonaws.com/mikaimages/noise.png'),
+              -webkit-gradient(linear, to top,-7.25% 658.38% ,-7.25% 755.66% ,color-stop(0,rgba(121, 85, 48, 1) ),color-stop(0.1178,rgba(123, 87, 50, 1) ),color-stop(0.3326,rgba(128, 94, 59, 1) ),color-stop(0.6732,rgba(137, 105, 73, 1) ),color-stop(1,rgba(150, 122, 93, 1) ));
+  background-image: url('https://s3-us-west-2.amazonaws.com/mikaimages/noise.png'),
+              -o-linear-gradient(to top, rgba(121, 85, 48, 1) 0%, rgba(123, 87, 50, 1) 11.78%, rgba(128, 94, 59, 1) 33.26%, rgba(137, 105, 73, 1) 67.32%, rgba(150, 122, 93, 1) 100%);
+  background-image: url('https://s3-us-west-2.amazonaws.com/mikaimages/noise.png'),
+              -ms-linear-gradient(to top, rgba(121, 85, 48, 1) 0%, rgba(123, 87, 50, 1) 11.78%, rgba(128, 94, 59, 1) 33.26%, rgba(137, 105, 73, 1) 67.32%, rgba(150, 122, 93, 1) 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#795530', endColorstr='#967A5D' ,GradientType=0)";
+  background-image: url('https://s3-us-west-2.amazonaws.com/mikaimages/noise.png'),
+              linear-gradient(to top, rgba(121, 85, 48, 1) 0%, rgba(123, 87, 50, 1) 11.78%, rgba(128, 94, 59, 1) 33.26%, rgba(137, 105, 73, 1) 67.32%, rgba(150, 122, 93, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#795530',endColorstr='#967A5D' , GradientType=0);
+
+  .header-logo {
+    ul {
+      margin: 0 auto;
+      display: table;
+
+      li:first-child {
+        margin: 0 .5em 0 -.5em;
+
+        a:hover img{
+          -webkit-filter: brightness(70%);
+        }
+      }
+
+      li:nth-child(2) {
+        display: table-cell;
+        vertical-align: middle;
+
+        h1 {
+          color: #EEBE6B;
+          text-shadow: 0 -1px 0 black;
+        }
+      }
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 1em;
+
+      li {
+        margin: 1em 0;
+
+        a {
+          font-family: 'Tienne';
+          font-size: 1.7em;
+          color: #624E2C;
+          text-shadow: 0 -1px 0 black;
+
+          &:hover {
+            color: #3D6F51;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 375px) and (max-height: 600px) {
+    img {
+      width: 75%;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    li a {
+      font-size: 1.3em !important;
+    }
+  }
+  /* Mobile Exlusive Styles
+  ============================ */
+  @media screen and (max-width: 343px) {
+    .header-logo {
+      h1 {
+        width: 143px;
+      }
+    }
+
+    nav {
+      li:not(:nth-of-type(2)) {
+        margin-left: 1.2em;
+      }
+
+      li:nth-of-type(2) {
+        margin-left: -.2em;
+      }
+    }
+  }
+
+  /* Mobile Only
+  ================= */
+  @media screen and (max-width: 767px) {
+    height: 23.64394993%;
+    nav {
+      li:first-child {
+          display: none;
+      }
+    }
+  }
+
+  /* Small Mobile to Smartphone
+  ============================ */
+  @media screen and (min-width: 480px) {
+    h1 {
+      font-size: 2.5em;
+    }
+  }
+
+  /* Ipad to Desktop Styles
+  ============================ */
+  @media screen and (min-width: 768px) {
+
+  }
+
+  /* Desktop to LG Styles
+  ========================== */
+  @media screen and (min-width: 992px) {
+
+  }
+
+  /* LG > Styles
+  ================= */
+  @media screen and (min-width: 1200px) {
+
+  }
+
+}
+
+
+
