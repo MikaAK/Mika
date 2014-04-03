@@ -120,18 +120,58 @@ header {
 
   }
 
+  /* Ipad to Desktop Styles
+  ============================ */
+  @media screen and (min-width: 921px) {
+    .header-logo {
+      float: left;
+      ul {
+        margin: 0;
+        margin-left: 1em;
+      }
+    }
+
+    nav {
+      float: right;
+      margin-top: 2.1em;
+      ul li {
+        margin: 0 1em;
+      }
+    }
+  }
+
   /* Desktop to LG Styles
   ========================== */
-  @media screen and (min-width: 992px) {
-
+  @media screen and (min-width: 1197px) {
+    nav ul li {
+      margin: 0 1.5em;
+    }
   }
 
-  /* LG > Styles
+  /* 1450px Min
   ================= */
-  @media screen and (min-width: 1200px) {
-
+  @media screen and (min-width: 1450px) {
+    nav ul li {
+      margin: 0 2em;
+    }
   }
 
+  /* 1750px Min
+  ================= */
+  @media screen and (min-width: 1750px) {
+    nav ul li {
+      margin: 0 3em;
+    }
+  }
+
+  &:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+  }
 }
 
 
