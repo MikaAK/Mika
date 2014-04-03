@@ -3,7 +3,6 @@ ruby '2.0.0'
 #ruby-gemset=Website
 
 gem 'rails', '4.0.2'
-gem 'bootstrap-sass', '3.1.1'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'sitemap_generator'
 gem 'factory_girl_rails'
@@ -14,6 +13,7 @@ group :development, :test do
   gem 'spork-rails', '4.0.0'
   gem 'guard-spork', '1.5.1'
   gem 'childprocess'
+  gem 'pg'
 end
 
 group :test do
@@ -22,7 +22,7 @@ group :test do
   gem 'libnotify', '0.8.0'
 end
 
-gem 'sass-rails', '4.0.1'
+gem 'sass-rails', '4.0.2'
 gem 'uglifier', '2.1.1'
 gem 'coffee-rails', '4.0.1'
 gem 'jquery-rails', '3.0.4'
@@ -30,7 +30,7 @@ gem 'turbolinks', '2.2.1'
 gem 'jbuilder', '1.0.2'
 gem 'html2haml'
 gem 'haml-rails'
-gem 'pg'
+gem 'sqlite3'
 gem 'whenever'
 
 group :doc do

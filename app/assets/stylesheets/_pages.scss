@@ -1,31 +1,38 @@
 /* Golbal Static Pages Styling
 ================================= */
 .pages {
-
-
-
+  
+  /* Home Styling
+  ================== */
   &#home {
     h2 {
       margin: 0;
       color: #EEBE6B;
       text-align: center;
-      padding-top: 20%;
+      padding-top: 5em;
     }
     .box-selection {
-      height: 1
-    }
+    }   
     /* Landscape Photo
     ===================== */
     @media screen and (orientation: landscape) {
       background-image: url(https://s3-us-west-2.amazonaws.com/mikaimages/homeBackground.jpg);
-      background-size: contain;
+      background-repeat:no-repeat;
+      background-size: cover;
     }
 
     /* Portrait Photo
     ==================== */
     @media screen and (orientation: portrait) {
       background-image: url(https://s3-us-west-2.amazonaws.com/mikaimages/mobileBackground.jpg);
+      background-repeat:no-repeat;
       background-size: cover;
+    }
+  }
+
+  &#tos {
+    h2, h3, p, ol, li, ul {
+      text-align: center;   
     }
   }
   /* Mobile Exlusive Styles
@@ -47,7 +54,9 @@
       background : linear-gradient(180deg, rgba(121, 85, 48, 1) 0%, rgba(123, 87, 50, 1) 16.71%, rgba(128, 94, 59, 1) 29.32%, rgba(137, 105, 73, 1) 44.66%, rgba(150, 122, 93, 1) 67.42%, rgba(167, 143, 119, 1) 100%);
       opacity : 0.7;
       filter: alpha(opacity=70) progid:DXImageTransform.Microsoft.Alpha(opacity=70) progid:DXImageTransform.Microsoft.gradient(startColorstr='#795530',endColorstr='#A78F77' , GradientType=0);
-      margin-bottom: 1.577287066%;
+      margin: 0 auto;
+      margin-bottom: 1.577287066%;            
+      width: 95%;
 
       .tab-pane {
         color: black;
@@ -72,23 +81,15 @@
       display: flex;
       justify-content: center;
       margin-bottom: 0;
-      margin-top: 17%;
+      margin-top: 17%;     
 
       li {
         margin: 0 .2em;
         width: 30%;
         font-size: .85em;
         border-top-right-radius: 10px;
-        border-top-left-radius: 10px;
-
-        a {
-          color: black;
-
-          &:hover {
-            color: black;
-          }
-        }
-
+        border-top-left-radius: 10px;    
+ 
         &:not(.active) {
           background : -moz-linear-gradient(-99.08% -35.47% -90deg,rgba(121, 85, 48, 1) 0%,rgba(123, 87, 50, 1) 16.71%,rgba(128, 94, 59, 1) 29.32%,rgba(137, 105, 73, 1) 44.66%,rgba(150, 122, 93, 1) 67.42%,rgba(167, 143, 119, 1) 100%);
           background : -webkit-linear-gradient(-90deg, rgba(121, 85, 48, 1) 0%, rgba(123, 87, 50, 1) 16.71%, rgba(128, 94, 59, 1) 29.32%, rgba(137, 105, 73, 1) 44.66%, rgba(150, 122, 93, 1) 67.42%, rgba(167, 143, 119, 1) 100%);
@@ -100,11 +101,20 @@
           opacity : 0.7;
           filter: alpha(opacity=70) progid:DXImageTransform.Microsoft.Alpha(opacity=70) progid:DXImageTransform.Microsoft.gradient(startColorstr='#795530',endColorstr='#A78F77' , GradientType=0);
         }
+
         &.active {
           background-color: #624E2C;
           opacity: .7;
-          a {
+          a, a:hover {
             color: #EEBE6B
+          }
+        }
+        a {
+          color: black;
+  
+          width: 100%;
+          &:hover {
+            color: black;
           }
         }
       }

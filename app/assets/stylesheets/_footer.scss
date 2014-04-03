@@ -15,12 +15,13 @@ footer {
   }
 
   ul {
-    margin-bottom: 0;
+  
     li {
-
+      margin-bottom: 0;
       display: inline-block;
       position: relative;
-
+      margin-top: -3px;
+    
       &:first-child {
 
       }

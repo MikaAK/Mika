@@ -18,26 +18,29 @@
 
 /* Functions For Web Start
 ============================= */
+var $window = $(window);
+
+
 function wrap_element_link_mobile(object, path) {
 
-  if($(this).width() < 768) {
+  if($(this).width() < 768 && !object.parent().is('a')) {
     object.wrap("<a href='" +  path + "'></a>");
   }
-
-  else{
-    object.unwrap("<a href='" +  path + "'></a>");
+  else if($(this).width() > 767 && object.parent().is('a')){
+    console.log('This is the path: ' + path);
+    object.unwrap();
   }
 }
 
 function resize_section() {
-  var sectionHeight = $(window).height() - $('header').height() - $('footer').height() - 5;
+  var sectionHeight = $window.height() - $('header').height() - $('footer').height();
   $('section').css('min-height',sectionHeight);
 
 }
 
 function center_tab_text() {
   if($(this).width() < 768) {
-    $('.tab-text').css('padding-top', $('.tab-content').height() / 6);
+    $('.tab-text').css('padding-top', $('.tab-content').height() / 4);
   }
 }
 /* Functions For Web End
@@ -47,12 +50,15 @@ function center_tab_text() {
 /* Called after document Load
 ================================ */
 $(document).ready(function() {
-  wrap_element_link_mobile($('#main-logo'), '/');
+  
+  var $mainLogo = $('#main-logo');
+  
+  wrap_element_link_mobile($mainLogo, '/');
   center_tab_text();
   resize_section();
 
-  $(document).resize(function() {
-    wrap_element_link_mobile($('#main-logo'), '/');
+  $window.resize(function() {
+    wrap_element_link_mobile($mainLogo, '/');
     resize_section();
     center_tab_text();
   })

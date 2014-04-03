@@ -6,7 +6,7 @@
     = javascript_include_tag "data-turbolinks-track" => true
     -#%link{ :rel => "stylesheet", :href => "http://basehold.it/24"}
     = csrf_meta_tags
-    = favicon_link_tag('favicon.ico')
+    = favicon_link_tag('https://s3-us-west-2.amazonaws.com/mikaimages/logo/favicon.ico')
     = render 'layouts/shim'
   %body
     .wrapper
@@ -19,5 +19,5 @@
       = render 'layouts/footer'
 
     / Load JavaScript Last For Page Speed
-    = javascript_include_tag :application, 'bootstrap.min'
+    = javascript_include_tag 'jquery.min', 'bootstrap.min', :application
     = render 'layouts/analytics'
