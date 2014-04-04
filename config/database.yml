@@ -1,8 +1,8 @@
 development:
-  adapter: postgresql
-  encoding: utf8
-  database: mika_development
+  adapter: sqlite3
+  database: db/development.sqlite3
   pool: 5
+  timeout: 5000
 
 test:
   adapter: postgresql
