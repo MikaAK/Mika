@@ -130,8 +130,8 @@
       }
     }
 
-    /* Ipad Styles to Desktop
-    ============================ */
+    /* Ipad Styles to Desktop - Start 2 column
+    ============================================= */
     @media screen and (min-width: 768px) {
       h2 {
         margin-left: 8.28125%;
@@ -312,7 +312,7 @@
     @media screen and (min-width: 1458px) {
       h2 {
         font-size: 3.2em;
-        padding-top: 8%;
+        padding-top: 6%;
       }
 
       .info-box {
@@ -327,8 +327,8 @@
       }
     }
 
-       /* Desktop larger Styles
-      =========================== */
+     /* Desktop larger Styles
+    =========================== */
     @media only screen and (min-width: 1700px) {
       .info-box {
         ul.tab-selection {
@@ -377,6 +377,8 @@
       }
     }
 
+    /* Two Column Layout Start
+    ============================= */
     @media screen and (min-width: 921px) {
       display: table;
 
@@ -415,11 +417,12 @@
       }
     }
 
+    /* <-------------  Small Fixes Start
+    ======================================= */
     @media screen and (min-width: 1025px) {
-
       article .inner-wrapper {
         p, li{
-          font-size: .8em;
+          font-size: .9em;
         }
       }
     }
@@ -428,6 +431,11 @@
       aside img {
         margin-left: 25%;
       }
+      article .inner-wrapper {
+        p, li{
+          font-size: 1em;
+        }
+      }
     }
 
     @media screen and (min-width: 1515px){
@@ -435,6 +443,8 @@
         margin-left: 36%;
       }
     }
+    /* Small Fixes End ------------------->
+    ========================================== */
   }
 
   &#tos, &#privacy {

@@ -8,10 +8,6 @@ describe "Pages" do
 
     before { visit root_path }
 
-    it 'displays image' do
-      should have_xpath("//img[@src=\"https://s3-us-west-2.amazonaws.com/mikaimages/mika.gif\"]")
-    end
-
     it 'has name' do
       should have_content("Mika Kalathil")
     end
