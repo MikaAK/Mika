@@ -98,7 +98,6 @@ header {
   /* Mobile Only
   ================= */
   @media screen and (max-width: 767px) {
-    height: 23.64394993%;
     nav {
       li:first-child {
           display: none;
@@ -123,8 +122,10 @@ header {
   /* Ipad to Desktop Styles
   ============================ */
   @media screen and (min-width: 921px) {
+    display: flex;
+    justify-content: space-between;
+
     .header-logo {
-      float: left;
       ul {
         margin: 0;
         margin-left: 1em;
@@ -132,7 +133,6 @@ header {
     }
 
     nav {
-      float: right;
       margin-top: 2.1em;
       ul li {
         margin: 0 1em;
@@ -162,15 +162,6 @@ header {
     nav ul li {
       margin: 0 3em;
     }
-  }
-
-  &:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
   }
 }
 

@@ -1,11 +1,12 @@
- @keyframes first {
-    0% { 
-    }
-    
-    100% {
-      right: 500px;
-    }
+@keyframes first {
+  0% {
+
   }
+
+  100% {
+    right: 500px;
+  }
+}
 
 /* Golbal Static Pages Styling
 ================================= */
@@ -66,7 +67,15 @@
           max-width: 600px;
         }
 
+
         .tab-text {
+          display: table;
+          height: 15em;
+          p {
+            display: table-cell;
+            vertical-align: middle;
+            margin: 0 auto;
+          }
         }
       }
 
@@ -114,7 +123,7 @@
 
     /* Mobile to Ipad Styles
     =========================== */
-    @media screen and (min-width: 480px){
+    @media screen and (min-width: 480px) {
       h2 {
         font-size: 2em;
         padding-top: 3em;
@@ -124,7 +133,7 @@
     /* Ipad Styles to Desktop
     ============================ */
     @media screen and (min-width: 768px) {
-      h2{
+      h2 {
         margin-left: 8.28125%;
         text-align: left;
         font-size: 2.4em;
@@ -155,7 +164,7 @@
               background : -webkit-radial-gradient(50% 50%, circle farthest-corner, rgba(98, 78, 44, 1) 0%, rgba(98, 78, 44, 0.66) 85.3%, rgba(98, 78, 44, 0.6) 100%);
               top: 0;
               right: 50%;
-              margin-right: -50px;      
+              margin-right: -50px;
               animation-name: first;
               animation-duration: 3s;
               -webkit-animation-name: first;
@@ -248,18 +257,18 @@
             height: 7em;
             width: 7em;
 
-            &:first-child a {
-              padding: 2.5em 1.5em;
+            &:nth-child(2) a {
+              padding: 1.5em 1em;
             }
 
             &:last-child a {
-              padding: 2.5em 1em;
+              padding: 2.2em 1em;
 
             }
 
             a {
               padding: 2em 1em;
-
+              font-size: 1.2em;
             }
           }
         }
@@ -279,17 +288,11 @@
             width: 8em;
 
             &:first-child a {
-              padding: 3em 2em;
+              padding: 2.1em 1.2em;
             }
-            
-            &:nth-child(2) {
-              a {
-                padding: 2.7em 1em;
-              }
-            }
-            &:last-child a {
-              padding: 3em 1em;
 
+            a {
+              font-size: 1.3em;
             }
           }
         }
@@ -327,18 +330,175 @@
        /* Desktop larger Styles
       =========================== */
     @media only screen and (min-width: 1700px) {
-        
+      .info-box {
+        ul.tab-selection {
+          min-height: 35em;
+          margin-top: -5em;
+        }
+      }
     }
   }
 
+  &#about {
+    width: 100%;
 
-  &#tos {
-    h2, h3, p, ol, li, ul {
+    aside {
+
+      width: 50%;
+      padding: 1.5em;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+        border-radius: 10%;
+      }
+    }
+
+    article {
+      line-height: 1.5em;
+
+      ul {
+        list-style-type: circle;
+        list-style-position: inside;
+        margin-left: 25%;
+      }
+
+      p {
+        margin: 0 auto;
+        max-width: 600px;
+      }
+
+      p:last-of-type {
+        margin-bottom: 1.5em;
+      }
+
+      p:nth-child(1) {
+        margin-top: .5em;
+      }
+    }
+
+    @media screen and (min-width: 921px) {
+      display: table;
+
+      aside {
+        width: 45%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0;
+        padding-left: 1em;
+        img {
+          margin-left: 15%;
+          max-width: 450px;
+        }
+      }
+
+      article {
+        width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+
+        .inner-wrapper{
+          margin-left: 5em;
+          max-width: 500px;
+
+          p {
+            padding: 1em 0;
+            font-size: .8em;
+          }
+          ul {
+            margin-left: 15%;
+            li {
+              font-size: .8em;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 1025px) {
+
+      article .inner-wrapper {
+        p, li{
+          font-size: .8em;
+        }
+      }
+    }
+
+    @media screen and (min-width: 1215px){
+      aside img {
+        margin-left: 25%;
+      }
+    }
+
+    @media screen and (min-width: 1515px){
+      aside img {
+        margin-left: 36%;
+      }
+    }
+  }
+
+  &#tos, &#privacy {
+    line-height: 1.5em;
+
+    h2 {
+      padding: 1em 0 1.2em;
+      font-size: 2.5em;
       text-align: center;
     }
+
+    h3:not(:first-child) {
+      padding: 1.2em 1em 1.3em;
+    }
+
+    p, ul, ol, li {
+      padding-left: 6.93742757%;
+
+      @media screen and (min-width: 946px) {
+        padding-left: 3.5%;
+      }
+
+      @media screen and (min-width: 1700px) {
+        padding-left: 2.5%;
+      }
+    }
+
+    ol {
+      list-style-type: armenian;
+      list-style-position: inside;
+    }
+
+    ul {
+      list-style-type: georgian;
+      list-style-position: inside;
+    }
+
+    address {
+      padding: 1em 0;
+      text-align: center;
+    }
+
+    p:last-of-type {
+      padding-bottom: 1em;
+    }
+
+    @media (max-width: 790px) {
+      h2 {
+        padding: .8em 0 1.2em;
+        line-height: 1em;
+      }
+    }
+  }
+
+  &#contact {
+
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
   }
 }
 
 
 
- 

@@ -49,11 +49,11 @@ body {
 
   }
   .wrapper {
-    margin: 0 auto -13px;
+    margin: 0 auto -16px;
 
     section {
-      padding-bottom: 13px;
-      background: url('https://s3-us-west-2.amazonaws.com/mikaimages/noise.png'),
+      padding-bottom: 20px;
+      background: url(http://basehold.it/i/24), url('https://s3-us-west-2.amazonaws.com/mikaimages/noise.png'),
                         #896949;
     }
   }

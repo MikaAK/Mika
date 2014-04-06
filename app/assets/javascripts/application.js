@@ -27,21 +27,13 @@ function wrap_element_link_mobile(object, path) {
     object.wrap("<a href='" +  path + "'></a>");
   }
   else if($(this).width() > 920 && object.parent().is('a')){
-    console.log('This is the path: ' + path);
     object.unwrap();
   }
 }
 
 function resize_section() {
-  var sectionHeight = $window.height() - $('header').height() - $('footer').height();
-  $('section').css('min-height',sectionHeight);
-
-}
-
-function center_tab_text() {
-  if($(this).width() < 768) {
-    $('.tab-text').css('padding-top', $('.tab-content').height() / 4);
-  }
+  var sectionMinHeight = $(window).height() - $('header').height() - $('footer').height() - 7;
+  $('section').css('min-height',sectionMinHeight);
 }
 /* Functions For Web End
 =========================== */
@@ -54,12 +46,11 @@ $(document).ready(function() {
   var $mainLogo = $('#main-logo');
 
   wrap_element_link_mobile($mainLogo, '/');
-  center_tab_text();
   resize_section();
+  console.log('called');
 
   $window.resize(function() {
     wrap_element_link_mobile($mainLogo, '/');
     resize_section();
-    center_tab_text();
-  })
-})
+    });
+});
