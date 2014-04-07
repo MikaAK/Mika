@@ -20,16 +20,20 @@ describe "Pages" do
 
     before { visit contact_path }
 
-    it 'contains email' do
-      should have_link('email', href: 'mailto:me@mikakalathil.ca')
+    it 'contains Email' do
+      should have_link('Email', href: 'mailto:me@mikakalathil.ca')
     end
 
     it 'contains Facebook' do
-      should have_link('Facebook Logo' , href: 'https://www.facebook.com/mika.kalathil')
+      should have_link('Facebook', href: 'https://www.facebook.com/mika.kalathil')
     end
 
     it 'contains LinkedIn' do
-      should have_link('linkedin logo' , href: 'http://ca.linkedin.com/in/mikakalathil')
+      should have_link('LinkedIn', href: 'http://ca.linkedin.com/in/mikakalathil')
+    end
+
+    it 'contains Twitter' do
+      should have_link('Twitter', href: 'https://www.twitter.com/MikaKalathil')
     end
   end
 end
