@@ -14,7 +14,6 @@ group :development, :test do
   gem 'guard-spork', '1.5.1'
   gem 'childprocess'
   gem 'sqlite3'
-  gem 'pg'
 end
 
 group :test do
@@ -40,4 +39,5 @@ end
 
 group :production do
   gem 'rails_12factor', '0.0.2'
+  gem 'pg'
 end
