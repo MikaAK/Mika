@@ -4,3 +4,7 @@
     %ul
       - object.errors.full_messages.each do |msg|
         %li *  #{msg}
+- if flash.any?
+  - flash.each do |name, msg|
+    .flash{:class => 'flash-name'}
+      = msg

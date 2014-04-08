@@ -1,8 +1,9 @@
 class ContactMailer < ActionMailer::Base
   default to: 'me@mikakalathil.ca'
   def contact_me(message)
-    mail(from: message.email,
-         subject: message.subject,
-         body: message.body)
+    @message = message
+    mail(:from => message.email,
+         :subject => message.name + " - " + message.subject,
+         :body => message.body).deliver
   end
 end

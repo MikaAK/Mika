@@ -7,7 +7,7 @@ Mika::Application.routes.draw do
 
   get '/new_project' => 'projects#new', :constraints => { :subdomain => 'admin' }
 
-  post '/send_message' => 'messages#contact'
+  post '/contact' => 'messages#contact'
 
   resources :projects, :only => [:index, :show]
   resources :projects, :only => [:update, :edit], :constraints => { :subdomain => 'admin' }

@@ -4,6 +4,7 @@ describe ContactMailer do
   describe 'contact_me' do
     let(:mail) {
       @message = Message.new
+      @message.name = 'Bob'
       @message.email = 'test@test.ca'
       @message.subject = 'This is a test'
       @message.body = 'Testing the body of the message'

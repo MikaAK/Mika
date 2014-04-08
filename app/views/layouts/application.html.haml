@@ -14,9 +14,10 @@
 
       = yield
 
+      = debug(params) if Rails.env.development?
+
     %footer
       = render 'layouts/footer'
-
     / Load JavaScript Last For Page Speed
     = javascript_include_tag 'jquery.min', 'bootstrap.min', :application
     = render 'layouts/analytics'
