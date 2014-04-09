@@ -15,27 +15,45 @@
   /* Home Styling
   ================== */
   &#home {
+    background-repeat:no-repeat;
+    background-size: cover;
+
     h2 {
       margin: 0;
       color: #EEBE6B;
       text-align: center;
       padding-top: 5em;
     }
+    .tab-pane#favorite {
+      .tab-text {
+        p {
+          display: block;
+        }
+
+        li {
+          padding-top: .5em;
+          display: block;
+          a {
+            color: #AE843D;
+            font-size: .9em;
+            &:hover {
+              color: #EEBE6B;
+            }
+          }
+        }
+      }
+    }
 
     /* Landscape Photo
     ===================== */
     @media screen and (orientation: landscape) {
       background-image: url(https://s3-us-west-2.amazonaws.com/mikaimages/homeBackground.jpg);
-      background-repeat:no-repeat;
-      background-size: cover;
     }
 
     /* Portrait Photo
     ==================== */
     @media screen and (orientation: portrait) {
       background-image: url(https://s3-us-west-2.amazonaws.com/mikaimages/mobileBackground.jpg);
-      background-repeat:no-repeat;
-      background-size: cover;
     }
 
     /* Mobile Exlusive Styles
@@ -44,9 +62,18 @@
 
       .tab-content {
         min-height: 15em;
-        background : linear-gradient(180deg, rgba(121, 85, 48, 1) 0%, rgba(123, 87, 50, 1) 16.71%, rgba(128, 94, 59, 1) 29.32%, rgba(137, 105, 73, 1) 44.66%, rgba(150, 122, 93, 1) 67.42%, rgba(167, 143, 119, 1) 100%);
-        background : -moz-linear-gradient(-99.08% -35.47% -90deg,rgba(121, 85, 48, 1) 0%,rgba(123, 87, 50, 1) 16.71%,rgba(128, 94, 59, 1) 29.32%,rgba(137, 105, 73, 1) 44.66%,rgba(150, 122, 93, 1) 67.42%,rgba(167, 143, 119, 1) 100%);
-        background : -webkit-linear-gradient(-90deg, rgba(121, 85, 48, 1) 0%, rgba(123, 87, 50, 1) 16.71%, rgba(128, 94, 59, 1) 29.32%, rgba(137, 105, 73, 1) 44.66%, rgba(150, 122, 93, 1) 67.42%, rgba(167, 143, 119, 1) 100%);
+        background : linear-gradient(180deg, rgba(121, 85, 48, 1) 0%,
+                                             rgba(123, 87, 50, 1) 16.71%,
+                                             rgba(128, 94, 59, 1) 29.32%,
+                                             rgba(137, 105, 73, 1) 44.66%,
+                                             rgba(150, 122, 93, 1) 67.42%,
+                                             rgba(167, 143, 119, 1) 100%);
+        background : -webkit-linear-gradient(-90deg, rgba(121, 85, 48, 1) 0%,
+                                                     rgba(123, 87, 50, 1) 16.71%,
+                                                     rgba(128, 94, 59, 1) 29.32%,
+                                                     rgba(137, 105, 73, 1) 44.66%,
+                                                     rgba(150, 122, 93, 1) 67.42%,
+                                                     rgba(167, 143, 119, 1) 100%);
         opacity : 0.7;
         filter: alpha(opacity=70) progid:DXImageTransform.Microsoft.Alpha(opacity=70) progid:DXImageTransform.Microsoft.gradient(startColorstr='#795530',endColorstr='#A78F77' , GradientType=0);
         margin: 0 auto;
@@ -68,9 +95,11 @@
         }
 
 
-        .tab-text {
+        .tab-text  {
           display: table;
+          width: 100%;
           height: 15em;
+
           p {
             display: table-cell;
             vertical-align: middle;
@@ -94,16 +123,25 @@
           border-top-left-radius: 10px;
 
           &:not(.active) {
-            background : linear-gradient(180deg, rgba(121, 85, 48, 1) 0%, rgba(123, 87, 50, 1) 16.71%, rgba(128, 94, 59, 1) 29.32%, rgba(137, 105, 73, 1) 44.66%, rgba(150, 122, 93, 1) 67.42%, rgba(167, 143, 119, 1) 100%);
-            background : -moz-linear-gradient(-99.08% -35.47% -90deg,rgba(121, 85, 48, 1) 0%,rgba(123, 87, 50, 1) 16.71%,rgba(128, 94, 59, 1) 29.32%,rgba(137, 105, 73, 1) 44.66%,rgba(150, 122, 93, 1) 67.42%,rgba(167, 143, 119, 1) 100%);
-            background : -webkit-linear-gradient(-90deg, rgba(121, 85, 48, 1) 0%, rgba(123, 87, 50, 1) 16.71%, rgba(128, 94, 59, 1) 29.32%, rgba(137, 105, 73, 1) 44.66%, rgba(150, 122, 93, 1) 67.42%, rgba(167, 143, 119, 1) 100%);
+            background : linear-gradient(180deg, rgba(121, 85, 48, 1) 0%,
+                                                 rgba(123, 87, 50, 1) 16.71%,
+                                                 rgba(128, 94, 59, 1) 29.32%,
+                                                 rgba(137, 105, 73, 1) 44.66%,
+                                                 rgba(150, 122, 93, 1) 67.42%,
+                                                 rgba(167, 143, 119, 1) 100%);
+            background : -webkit-linear-gradient(-90deg, rgba(121, 85, 48, 1) 0%,
+                                                         rgba(123, 87, 50, 1) 16.71%,
+                                                         rgba(128, 94, 59, 1) 29.32%,
+                                                         rgba(137, 105, 73, 1) 44.66%,
+                                                         rgba(150, 122, 93, 1) 67.42%,
+                                                         rgba(167, 143, 119, 1) 100%);
             opacity : 0.7;
-            filter: alpha(opacity=70) progid:DXImageTransform.Microsoft.Alpha(opacity=70) progid:DXImageTransform.Microsoft.gradient(startColorstr='#795530',endColorstr='#A78F77' , GradientType=0);
           }
 
           &.active {
             background-color: #624E2C;
             opacity: .7;
+
             a, a:hover {
               color: #EEBE6B
             }
@@ -155,13 +193,18 @@
             text-align: center;
             height: 6em;
             width: 6em;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
             border-radius: 50%;
             position: absolute;
 
             &:first-child {
-              background : radial-gradient(50% 50%, circle farthest-corner, rgba(98, 78, 44, 1) 0%, rgba(98, 78, 44, 0.66) 85.3%, rgba(98, 78, 44, 0.6) 100%);
-              background : -moz-radial-gradient(50% 50%, circle farthest-corner, rgba(98, 78, 44, 1) 0%, rgba(98, 78, 44, 0.66) 85.3%, rgba(98, 78, 44, 0.6) 100%);
-              background : -webkit-radial-gradient(50% 50%, circle farthest-corner, rgba(98, 78, 44, 1) 0%, rgba(98, 78, 44, 0.66) 85.3%, rgba(98, 78, 44, 0.6) 100%);
+              background : radial-gradient(50% 50%, circle farthest-corner, rgba(98, 78, 44, 1) 0%,
+                                                                            rgba(98, 78, 44, 0.66) 85.3%,
+                                                                            rgba(98, 78, 44, 0.6) 100%);
+              background : -webkit-radial-gradient(50% 50%, circle farthest-corner, rgba(98, 78, 44, 1) 0%,
+                                                                                    rgba(98, 78, 44, 0.66) 85.3%,
+                                                                                    rgba(98, 78, 44, 0.6) 100%);
               top: 0;
               right: 50%;
               margin-right: -50px;
@@ -181,18 +224,25 @@
 
 
             &:nth-child(2) {
-              background: radial-gradient(50% 50%, circle farthest-corner, rgba(121, 85, 48, 1) 0%, rgba(121, 85, 48, 0.66) 85.3%, rgba(121, 85, 48, 0.6) 100%);
-              background: -moz-radial-gradient(50% 50%, circle farthest-corner, rgba(121, 85, 48, 1) 0%, rgba(121, 85, 48, 0.66) 85.3%, rgba(121, 85, 48, 0.6) 100%);
-              background: -webkit-radial-gradient(50% 50%, circle farthest-corner, rgba(121, 85, 48, 1) 0%, rgba(121, 85, 48, 0.66) 85.3%, rgba(121, 85, 48, 0.6) 100%);
+              background: radial-gradient(50% 50%, circle farthest-corner, rgba(121, 85, 48, 1) 0%,
+                                                                           rgba(121, 85, 48, 0.66) 85.3%,
+                                                                           rgba(121, 85, 48, 0.6) 100%);
+              background: -webkit-radial-gradient(50% 50%, circle farthest-corner, rgba(121, 85, 48, 1) 0%,
+                                                                                   rgba(121, 85, 48, 0.66) 85.3%,
+                                                                                   rgba(121, 85, 48, 0.6) 100%);
               filter: progid:DXImageTransform.Microsoft.Alpha(Stlye=2);
             }
 
             &:last-child {
-              background : radial-gradient(50% 50%, circle farthest-corner, rgba(111, 68, 44, 1) 0%, rgba(111, 68, 44, 0.66) 85.3%, rgba(111, 68, 44, 0.6) 100%);
-              background : -moz-radial-gradient(50% 50%, circle farthest-corner, rgba(111, 68, 44, 1) 0%, rgba(111, 68, 44, 0.66) 85.3%, rgba(111, 68, 44, 0.6) 100%);
-              background : -webkit-radial-gradient(50% 50%, circle farthest-corner, rgba(111, 68, 44, 1) 0%, rgba(111, 68, 44, 0.66) 85.3%, rgba(111, 68, 44, 0.6) 100%);
+              background : radial-gradient(50% 50%, circle farthest-corner, rgba(111, 68, 44, 1) 0%,
+                                                                            rgba(111, 68, 44, 0.66) 85.3%,
+                                                                            rgba(111, 68, 44, 0.6) 100%);
+              background : -webkit-radial-gradient(50% 50%, circle farthest-corner, rgba(111, 68, 44, 1) 0%,
+                                                                                    rgba(111, 68, 44, 0.66) 85.3%,
+                                                                                    rgba(111, 68, 44, 0.6) 100%);
               filter: progid:DXImageTransform.Microsoft.Alpha(Stlye=2);
               right: 0;
+
               a {
                 left: 3px;
                 padding: 2em 1em;
@@ -224,6 +274,8 @@
           display: inline-block;
           float: left;
           border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
 
           h3 {
             margin-left: 3.107344632%;
@@ -236,6 +288,16 @@
             max-width: 23em;
             margin-top: 2em;
             font-size: 1.2em;
+          }
+
+          .tab-text li {
+            margin-left: 8.4745762715%;
+            max-width: 23em;
+            font-size: 1.2em;
+          }
+
+          li:last-child {
+            padding-bottom: 1em;
           }
         }
       }
@@ -317,6 +379,7 @@
 
       .info-box {
         padding-top: 6.154747948%;
+
           ul.tab-selection {
             min-height: 30em;
             margin-top: -3em;
@@ -351,6 +414,8 @@
 
       img {
         width: 100%;
+        -webkit-border-radius: 10%;
+        -moz-border-radius: 10%;
         border-radius: 10%;
       }
     }
@@ -367,6 +432,7 @@
       p {
         margin: 0 auto;
         max-width: 600px;
+        padding: 0 .5em;
         text-align: center;
       }
 
@@ -390,6 +456,7 @@
         vertical-align: middle;
         padding: 0;
         padding-left: 1em;
+
         img {
           margin-left: 15%;
           max-width: 450px;
@@ -406,11 +473,13 @@
           max-width: 500px;
 
           p {
-            padding: 1em 0;
+            padding: .5em 0;
             font-size: .8em;
           }
+
           ul {
             margin-left: 15%;
+
             li {
               font-size: .8em;
             }
@@ -444,10 +513,17 @@
       aside img {
         margin-left: 36%;
       }
+
       article .inner-wrapper {
         p, li{
           font-size: 1.1em;
         }
+      }
+    }
+
+    @media screen and (min-width: 1100px) and (max-height: 756px) {
+      aside img {
+        width: 60%;
       }
     }
     /* Small Fixes End ------------------->
@@ -512,8 +588,15 @@
       text-align: center;
     }
 
+    h3 {
+      text-align: center;
+      font-size: .8em;
+      padding-bottom: 2.2em;
+    }
+
     #contact-box {
       text-align: center;
+      margin: 0 auto;
 
       label {
         display: block;
@@ -521,10 +604,11 @@
         margin-bottom: .3em;
         text-decoration: underline;
         font-weight: bold;
-        font-family: 'Lora';
+        font-family: 'Lora', serif;
+        margin-top: .3em;
 
         &:not(:first-of-type) {
-          margin-top: .8em;
+          margin-top: .5em;
         }
       }
 
@@ -534,18 +618,18 @@
         -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
         -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
         box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
         border-radius: 5px;
 
         &#send-button {
           width: 75%;
           margin: .5em;
-          margin-top: 1.5em;
-          font-family: 'Lora';
+          font-family: 'Lora', serif;
         }
 
         &:not(#send-button) {
-          width: 50%;
-          font-family: 'Lora';
+          width: 65%; font-family: 'Lora', serif;
           text-align: center;
         }
       }
@@ -563,27 +647,56 @@
       }
     }
 
+    @media screen and (max-width: 1200px) {
+      #contact-box {
+        width: 50%;
+      }
+    }
+
     @media screen and (min-width: 767px) {
       h2 {
         padding-bottom: 0;
       }
 
-      h3 {
-        text-align: center;
-        font-size: .8em;
-        padding-bottom: 2.2em;
-      }
-
       #contact-box {
         float: left;
-        width: 50%;
+        margin-top: 6.559838274%;
+        margin-left: 6.984866123%;
+        border: 2px solid black;
+        -webkit-border-radius: 10%;
+        -moz-border-radius: 10%;
+        border-radius: 10%;
+        width: 30%;
+
+        background-image: url("https://s3-us-west-2.amazonaws.com/mikaimages/noise.png"),
+                          linear-gradient(to bottom, rgba(0,0,0,0) 10%,
+                                                     rgba(255,255,255,.1) 60%,
+                                                     rgba(255,255,255,.2) 70%,
+                                                     rgba(255,255,255,.3) 90%);
+        background-image: url("https://s3-us-west-2.amazonaws.com/mikaimages/noise.png"),
+                          -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 10%,
+                                                             rgba(255,255,255,.1) 60%,
+                                                             rgba(255,255,255,.2) 70%,
+                                                                                                                             rgba(255,255,255,.3) 90%);
       }
 
       #socialmedia-images {
         float: right;
         width: 48%;
         margin-right: 2%;
-        margin-top: 7em;
+        margin-top: 12em;
+      }
+    }
+
+    @media screen and (min-width: 1236px) and (max-height: 749px) {
+      #contact-box {
+        margin-top: 0;
+      }
+    }
+
+    @media screen and (min-width: 1336px) and (min-height: 750px) {
+      #contact-box {
+        margin-top: 5.859838274%;
       }
     }
   }
@@ -594,6 +707,3 @@
     clear: both;
   }
 }
-
-
-
