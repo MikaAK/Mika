@@ -33,6 +33,7 @@ gem 'html2haml'
 gem 'haml-rails'
 gem 'whenever'
 gem 'simple_form'
+gem 'rack-zippy'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
