@@ -33,7 +33,6 @@ gem 'html2haml'
 gem 'haml-rails'
 gem 'whenever'
 gem 'simple_form'
-gem 'rack-zippy'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
@@ -42,4 +41,5 @@ end
 group :production do
   gem 'rails_12factor', '0.0.2'
   gem 'pg', '0.17.1'
+  gem 'heroku_rails_deflate'
 end

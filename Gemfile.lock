@@ -80,6 +80,10 @@ GEM
       activesupport (>= 4.0.1)
       haml (>= 3.1, < 5.0)
       railties (>= 4.0.1)
+    heroku_rails_deflate (1.0.3)
+      actionpack (>= 3.2.13)
+      activesupport (>= 3.2.13)
+      rack (>= 1.4.5)
     hike (1.2.3)
     hpricot (0.8.6)
     html2haml (1.0.1)
@@ -123,7 +127,6 @@ GEM
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
-    rack-zippy (1.1.0)
     rails (4.0.2)
       actionmailer (= 4.0.2)
       actionpack (= 4.0.2)
@@ -234,12 +237,12 @@ DEPENDENCIES
   guard-rspec
   guard-spork (= 1.5.1)
   haml-rails
+  heroku_rails_deflate
   html2haml
   jbuilder (= 2.0.6)
   jquery-rails (= 3.1.0)
   libnotify (= 0.8.2)
   pg (= 0.17.1)
-  rack-zippy
   rails (= 4.0.2)
   rails_12factor (= 0.0.2)
   rspec-rails

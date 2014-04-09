@@ -39,7 +39,5 @@ module Mika
     config.action_mailer.raise_delivery_errors = true
     config.action_mailer.register_template_extension('haml')
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
-    config.middleware.swap(ActionDispatch::Static, Rack::Zippy::AssetServer)
-
   end
 end
