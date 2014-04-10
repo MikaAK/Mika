@@ -11,25 +11,23 @@
           %p If your seeing this page either I haven't added any of my projects (which I should've) or my database is not working (more likely)! Please use the #{link_to 'contact', '/contact'} form and notify me!!
 
   - if @projects.count == 1
-    #section-container.single-item
-      - @projects.each do |project|
-        - if project == @projects.last
-          .project-box
-            %h3.project-name #{project.name}
+    #section-container
+      .project-box.single-item
+        %h3.project-name #{@projects.last.name}
 
-            %article.project-description
-              %p #{project.description}
+        %article.project-description
+          %p #{@projects.last.description}
 
-            %p.project-year Creation Year: #{project.year}
+        %p.project-year Creation Year: #{@projects.last.year}
 
-            %button.darkgreen-button
-              = link_to 'View Details', project_path(project), :class => 'project-link'
+        %button.darkgreen-button
+          = link_to 'View Details', project_path(@projects.last), :class => 'project-link'
 
   - else
     #section-container
       - @projects.each do |project|
         - if project == @projects.last
-          .project-box
+          .project-box.single-item
             %h3.project-name #{project.name}
 
             %article.project-description
