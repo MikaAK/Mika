@@ -58,6 +58,14 @@
         }
       }
     }
+
+    @media screen and (max-width: 485px) {
+      #section-container:before {
+        content: '';
+        display: block;
+        height: 1em;
+      }
+    }
     /* Mobile Exlusive Styles
     ============================ */
     @media screen and (max-width: 767px) {
@@ -68,8 +76,20 @@
     /* Ipad to Desktop Styles
     ============================ */
     @media screen and (min-width: 768px) {
-      #section-container.no-items {
-        height: 40em;
+      #section-container {
+        &.no-items {
+          height: 40em;
+        }
+        &:not(.no-items) {
+          .project-box {
+            width: 35%;
+            margin: 0;
+
+            &:nth-of-type(2n+2) {
+              margin-left: 2%;
+            }
+          }
+        }
       }
     }
   }
