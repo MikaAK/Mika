@@ -89,17 +89,26 @@ body {
                   rgba(255, 102, 102, 0.4);
     }
 
-    button.darkgreen-button {
+    .darkgreen-button {
       width: 75%;
-      height: 2.5em;
+      height: 1.5em;
       background: #45884E;
       border-radius: 10px;
       border: 0;
       cursor: pointer;
+      color: #EEBE6B;
+      font-family: 'Lora';
+      font-size: 1.2em;
 
       &:hover {
         background: #3D6F51;
       }
+    }
+
+    .disable-link {
+      pointer-events: none;
+      cursor: default;
+      color: #6F6F6F;
     }
   }
 }
