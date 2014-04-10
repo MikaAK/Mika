@@ -3,6 +3,7 @@
 .projects {
   &#home {
     #section-container {
+      padding-top: 1.5em;
       &.no-items {
         display: table;
         height: 52em;
@@ -12,8 +13,8 @@
       .project-box {
         height: 19em;
         width: 70%;
-        margin-top: 1.5em;
         margin: 0 auto;
+        margin-top: 1.5em;
         text-align: center;
         border: 2px solid #624E2C;
         border-radius: 15px;
