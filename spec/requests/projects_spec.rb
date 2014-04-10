@@ -29,7 +29,8 @@ describe ProjectsController do
       end
 
       it 'should display invalid info' do
-        should have_content('Invalid Fields')
+        click_button submit
+        should have_content('The form')
       end
     end
 
@@ -50,7 +51,8 @@ describe ProjectsController do
       end
 
       it 'should display success' do
-        should have_content('Project added')
+        click_button submit
+        should have_content('Project added successfully')
       end
     end
   end

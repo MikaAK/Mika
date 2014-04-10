@@ -583,20 +583,11 @@
   }
 
   &#contact {
-    h2 {
-      padding: 1em 0 .7em;
-      text-align: center;
-    }
-
-    h3 {
-      text-align: center;
-      font-size: .8em;
-      padding-bottom: 2.2em;
-    }
 
     #contact-box {
       text-align: center;
       margin: 0 auto;
+      width: 66%;
 
       label {
         display: block;
@@ -605,7 +596,7 @@
         text-decoration: underline;
         font-weight: bold;
         font-family: 'Lora', serif;
-        margin-top: .3em;
+        padding-top: .3em;
 
         &:not(:first-of-type) {
           margin-top: .5em;
@@ -637,26 +628,30 @@
 
     #socialmedia-images {
       display: flex;
-      flex-flow: column wrap;
-      align-items: center;
-      height: 240px;
-      margin-top: 1em;
+      flex-flow: row wrap;
 
-      a {
-        margin: .5em 0 .7em;
+      h4 {
+        text-align: center;
+      }
+
+      #facebook {
+        a {margin-left: 21.212121212%;}
       }
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 766px) {
+      #contact-box {
+        width: 66%;
+      }
+    }
+
+    @media screen and (min-width: 767px) and (max-width: 1200px) {
       #contact-box {
         width: 50%;
       }
     }
 
     @media screen and (min-width: 767px) {
-      h2 {
-        padding-bottom: 0;
-      }
 
       #contact-box {
         float: left;
@@ -678,13 +673,6 @@
                                                              rgba(255,255,255,.1) 60%,
                                                              rgba(255,255,255,.2) 70%,
                                                                                                                              rgba(255,255,255,.3) 90%);
-      }
-
-      #socialmedia-images {
-        float: right;
-        width: 48%;
-        margin-right: 2%;
-        margin-top: 12em;
       }
     }
 

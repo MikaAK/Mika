@@ -5,7 +5,7 @@ class MessagesController < ApplicationController
       ContactMailer.contact_me(@message)
       redirect_to contact_path, :notice => 'Message was sent successfully.'
     else
-      redirect_to contact_path, :notice => 'Message was not sent please fill out the fields correctly.'
+      render :file => 'pages/contact'
     end
   end
 end

@@ -21,14 +21,10 @@ class ProjectsController < ApplicationController
 
   end
 
-  def destroy
-
-  end
-
   def create
     @project = Project.new(project_params)
     if @project.save
-      redirect_to projects_path
+      redirect_to projects_path, notice: 'Project added successfully'
     else
       render 'new'
     end

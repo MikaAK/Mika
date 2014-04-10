@@ -1,25 +1,26 @@
 - provide :title, "Contact"
 %section#contact.pages
-  %h2 Contact Me
-  %h3 Unfinished Page! Will be finished ASAP Contact form works!
 
   #contact-box
     = render 'contact_mailer/contact_me'
 
-
   #socialmedia-images
-    = link_to 'mailto:me@mikakalathil.ca' do
-      = image_tag 'https://s3-us-west-2.amazonaws.com/mikaimages/socialmedia/email.png', alt: 'Email', id: 'email'
-    %h4 Email Me
+    #email
+      = link_to 'mailto:me@mikakalathil.ca' do
+        = image_tag 'https://s3-us-west-2.amazonaws.com/mikaimages/socialmedia/email.png', alt: 'Email'
+      %h4 Email Me
 
-    = link_to 'https://www.twitter.com/MikaKalathil', target: '_blank' do
-      = image_tag 'https://s3-us-west-2.amazonaws.com/mikaimages/socialmedia/twitter.png', alt: 'Twitter', id: 'twitter'
-    %h4 Laugh at my tweet*
+    #twitter
+      = link_to 'https://www.twitter.com/MikaKalathil', target: '_blank' do
+        = image_tag 'https://s3-us-west-2.amazonaws.com/mikaimages/socialmedia/twitter.png', alt: 'Twitter'
+      %h4 Laugh at my tweet*
 
-    = link_to 'http://ca.linkedin.com/in/mikakalathil', target: '_blank' do
-      = image_tag 'https://s3-us-west-2.amazonaws.com/mikaimages/socialmedia/linkedin.png', alt: 'LinkedIn', id: 'linkedin'
-    %h4 View my profile
+    #linkedin
+      = link_to 'http://ca.linkedin.com/in/mikakalathil', target: '_blank' do
+        = image_tag 'https://s3-us-west-2.amazonaws.com/mikaimages/socialmedia/linkedin.png', alt: 'LinkedIn'
+      %h4 View my profile
 
-    = link_to 'https://www.facebook.com/mika.kalathil', target: '_blank' do
-      = image_tag 'https://s3-us-west-2.amazonaws.com/mikaimages/socialmedia/facebook.png', alt: 'Facebook', id: 'facebook'
-    %h4 Facebook Me
+    #facebook
+      = link_to 'https://www.facebook.com/mika.kalathil', target: '_blank' do
+        = image_tag 'https://s3-us-west-2.amazonaws.com/mikaimages/socialmedia/facebook.png', alt: 'Facebook'
+      %h4 Facebook Me
