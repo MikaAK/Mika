@@ -21,6 +21,7 @@ Mika::Application.configure do
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
 
+    config.action_mailer.perform_deliveries = true
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
   config.assets.css_compressor = :sass

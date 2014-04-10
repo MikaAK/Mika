@@ -1,5 +1,6 @@
 = form_for @message, :url => contact_path do |f|
   = render 'layouts/error_messages', object: f.object
+  = render 'layouts/flash'
   = f.label :name
   = f.text_field :name, :placeholder => 'Enter your your name...'
 
@@ -12,4 +13,4 @@
   = f.label :body
   = f.text_area :body, :placeholder => 'Enter your message...', :size => '25x15'
 
-  = f.submit 'Submit', :id => 'send-button'
+  = f.button 'Send', :id => 'send-button'
