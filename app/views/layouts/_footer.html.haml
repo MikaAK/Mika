@@ -2,7 +2,8 @@
   %li
     &copy; Mika Kalathil 2014. All Rights Reserved.
     = link_to (image_tag "//ssl.gstatic.com/images/icons/gplus-16.png", :alt => "Google+", :size => "16x16"), "//plus.google.com/u/0/101662310373136763168?prsrc=3", :rel => "author", :target => "_top", :id => "google-img"
-  %li
-    = link_to 'Terms of Service', tos_path, class: is_active?('terms_of_service')
-  %li
-    = link_to 'Privacy Policy', privacy_path, class: is_active?('privacy')
+  %nav
+    %li
+      = link_to 'Terms of Service', tos_path, class: is_active?('terms_of_service')
+    %li
+      = link_to 'Privacy Policy', privacy_path, class: is_active?('privacy')
