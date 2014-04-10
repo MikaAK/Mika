@@ -88,6 +88,19 @@ body {
       background: linear-gradient(to bottom, rgba(255,255,255, 0) 10%, rgba(255,255,255,.2) 70% , rgba(255,255,255,.3) 90%),
                   rgba(255, 102, 102, 0.4);
     }
+
+    button.darkgreen-button {
+      width: 75%;
+      height: 2.5em;
+      background: #45884E;
+      border-radius: 10px;
+      border: 0;
+      cursor: pointer;
+
+      &:hover {
+        background: #3D6F51;
+      }
+    }
   }
 }
 

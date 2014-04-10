@@ -47,13 +47,13 @@
     /* Landscape Photo
     ===================== */
     @media screen and (orientation: landscape) {
-      background-image: url(https://s3-us-west-2.amazonaws.com/mikaimages/homeBackground.jpg);
+      background-image: url(https://s3-us-west-2.amazonaws.com/mikaimages/homebackground.jpg);
     }
 
     /* Portrait Photo
     ==================== */
     @media screen and (orientation: portrait) {
-      background-image: url(https://s3-us-west-2.amazonaws.com/mikaimages/mobileBackground.jpg);
+      background-image: url(https://s3-us-west-2.amazonaws.com/mikaimages/mobilebackground.jpg);
     }
 
     /* Mobile Exlusive Styles
@@ -123,18 +123,19 @@
           border-top-left-radius: 10px;
 
           &:not(.active) {
-            background : linear-gradient(180deg, rgba(121, 85, 48, 1) 0%,
-                                                 rgba(123, 87, 50, 1) 16.71%,
-                                                 rgba(128, 94, 59, 1) 29.32%,
-                                                 rgba(137, 105, 73, 1) 44.66%,
-                                                 rgba(150, 122, 93, 1) 67.42%,
-                                                 rgba(167, 143, 119, 1) 100%);
             background : -webkit-linear-gradient(-90deg, rgba(121, 85, 48, 1) 0%,
                                                          rgba(123, 87, 50, 1) 16.71%,
                                                          rgba(128, 94, 59, 1) 29.32%,
                                                          rgba(137, 105, 73, 1) 44.66%,
                                                          rgba(150, 122, 93, 1) 67.42%,
                                                          rgba(167, 143, 119, 1) 100%);
+
+            background : linear-gradient(180deg, rgba(121, 85, 48, 1) 0%,
+                                                 rgba(123, 87, 50, 1) 16.71%,
+                                                 rgba(128, 94, 59, 1) 29.32%,
+                                                 rgba(137, 105, 73, 1) 44.66%,
+                                                 rgba(150, 122, 93, 1) 67.42%,
+                                                 rgba(167, 143, 119, 1) 100%);
             opacity : 0.7;
           }
 
@@ -631,18 +632,6 @@
           width: 65%; font-family: 'Lora', serif;
           text-align: center;
         }
-      }
-
-      button {
-        width: 75%;
-        height: 2.5em;
-        background: #45884E;
-        border-radius: 10px;
-        border: 0;
-        cursor: pointer;
-      }
-      button:hover {
-        background: #3D6F51;
       }
     }
 

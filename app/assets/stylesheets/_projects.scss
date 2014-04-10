@@ -9,18 +9,22 @@
         margin: 0 auto;
       }
     }
+    /* Mobile Exlusive Styles
+    ============================ */
+    @media screen and (max-width: 767px) {
+      #section-container.no-items {
+        height: 20em;
+      }
+    }
+    /* Ipad to Desktop Styles
+    ============================ */
+    @media screen and (min-width: 768px) {
+      #section-container.no-items {
+        height: 40em;
+      }
+    }
   }
-  /* Mobile Exlusive Styles
-  ============================ */
-  @media screen and (max-width: 767px) {
 
-  }
-
-  /* Ipad to Desktop Styles
-  ============================ */
-  @media screen and (min-width: 768px) {
-
-  }
 
   /* Desktop to LG Styles
   ========================== */

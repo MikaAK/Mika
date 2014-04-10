@@ -25,4 +25,8 @@ class Project < ActiveRecord::Base
                                    :greater_than => 2012,
                                    :less_than => 2015
                    }
+
+  def to_param
+    name.gsub(' ', '-')
+  end
 end
