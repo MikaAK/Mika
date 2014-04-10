@@ -4,6 +4,6 @@ class ContactMailer < ActionMailer::Base
     @message = message
     mail(:from => message.email,
          :subject => message.name + " - " + message.subject,
-         :body => message.email + " = " + message.body).deliver
+         :body => message.body).deliver
   end
 end
