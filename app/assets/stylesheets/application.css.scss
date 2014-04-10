@@ -56,6 +56,38 @@ body {
       background:  url('https://s3-us-west-2.amazonaws.com/mikaimages/noise.png'),
                         #896949;
     }
+
+    .alert {
+      display: table-cell;
+      vertical-align: middle;
+
+      .inner {
+        padding: 1.5em;
+        border: 2px solid rgba(255, 20, 20, 0.6);
+        border-radius: 15px;
+        max-width:  600px;
+        background: -webkit-linear-gradient(to bottom, rgba(255,255,255, 0) 10%, rgba(255,255,255,.2) 70%, rgba(255,255,255,.3) 90%),
+                    rgba(255, 97, 97, 0.3);
+        background: linear-gradient(to bottom, rgba(255,255,255, 0) 10%, rgba(255,255,255,.2) 70% , rgba(255,255,255,.3) 90%),
+                    rgba(255, 97, 97, 0.3);
+
+        a {
+          color: #EEBE6B;
+          &:hover {
+            color: rgba(255, 20, 20, 1);
+          }
+        }
+      }
+    }
+
+    #error-explination {
+      border: 2px solid rgba(240, 0, 0, 0.6);
+      border-radius: 15px;
+      background: -webkit-linear-gradient(to bottom, rgba(255,255,255, 0) 10%, rgba(255,255,255,.2) 70% , rgba(255,255,255,.3) 90%),
+                  rgba(255, 102, 102, 0.4);
+      background: linear-gradient(to bottom, rgba(255,255,255, 0) 10%, rgba(255,255,255,.2) 70% , rgba(255,255,255,.3) 90%),
+                  rgba(255, 102, 102, 0.4);
+    }
   }
 }
 

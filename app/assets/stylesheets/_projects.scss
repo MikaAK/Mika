@@ -1,7 +1,15 @@
 /* Global Project Styles
 ========================== */
 .projects {
-
+  &#home {
+    #section-container {
+      &.no-items {
+        display: table;
+        height: 52em;
+        margin: 0 auto;
+      }
+    }
+  }
   /* Mobile Exlusive Styles
   ============================ */
   @media screen and (max-width: 767px) {

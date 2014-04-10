@@ -589,6 +589,14 @@
       margin: 0 auto;
       width: 66%;
 
+      .alert {
+        padding-left: 10em;
+
+        .inner {
+          max-width: 1000px;
+        }
+      }
+
       label {
         display: block;
         width: 100%;
@@ -649,18 +657,6 @@
         text-align: center;
         width: 50%;
         margin-bottom: 1em;
-      }
-
-      #facebook {
-      }
-
-      #email {
-      }
-
-      #twitter {
-      }
-
-      #linkedin {
       }
     }
 

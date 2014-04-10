@@ -1,15 +1,31 @@
 -provide :title, "Projects"
-%section.projects.body-section#home
-  %h2.section-heading Existing Projects
+%section.projects#home
 
   = render 'layouts/flash'
 
-  #section-container
-    - if @projects.count == 0
-      %p Currently all my existing projects are stored on #{link_to 'GitHub', 'https://github.com/Snowfiring', target: '_blank'}
 
-    - if @projects.count % 2 == 0
-      - @projects.each do |project|
+  - if @projects.count == 0
+    #section-container.no-items
+      .alert
+        .inner
+          %p If your seeing this page either I haven't added any of my projects (which I should've) or my database is not working (more likely)! Please use the #{link_to 'contact', '/contact'} form and notify me!!
+
+  - if @projects.count % 2 == 0
+    #section-container
+    - @projects.each do |project|
+      .project-box
+        %h3.project-name #{project.name}
+
+        %article.project-description
+          %p.project-description #{project.description}
+
+        %p.project-year Creation Year: #{project.year}
+
+        = link_to 'GitHub', project.link, target: '_blank'
+  - else
+    #section-container
+    - @projects.each do |project|
+      - if project == @projects.last
         .project-box
           %h3.project-name #{project.name}
 
@@ -19,25 +35,13 @@
           %p.project-year Creation Year: #{project.year}
 
           = link_to 'GitHub', project.link, target: '_blank'
-    - else
-      - @projects.each do |project|
-        - if project == @projects.last
-          .project-box
-            %h3.project-name #{project.name}
+      - else
+        .project-box
+          %h3.project-name #{project.name}
 
-            %article.project-description
-              %p.project-description #{project.description}
+          %article.project-description
+            %p.project-description #{project.description}
 
-            %p.project-year Creation Year: #{project.year}
+          %p.project-year Creation Year: #{project.year}
 
-            = link_to 'GitHub', project.link, target: '_blank'
-        - else
-          .project-box
-            %h3.project-name #{project.name}
-
-            %article.project-description
-              %p.project-description #{project.description}
-
-            %p.project-year Creation Year: #{project.year}
-
-            = link_to 'GitHub', project.link, target: '_blank'
+          = link_to 'GitHub', project.link, target: '_blank'
