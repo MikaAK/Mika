@@ -33,6 +33,8 @@ gem 'html2haml'
 gem 'haml-rails'
 gem 'whenever'
 gem 'simple_form'
+# For recieving emails when I can set this up
+# gem 'mandrill-rails'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
