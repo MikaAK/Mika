@@ -171,7 +171,7 @@
 
     /* Ipad Styles to Desktop - Start 2 column
     ============================================= */
-    @media screen and (min-width: 768px) {
+    @media screen and (#{$IpadBreakpoint}) {
       h2 {
         margin-left: 8.28125%;
         text-align: left;
@@ -489,7 +489,7 @@
 
     /* <-------------  Small Fixes Start
     ======================================= */
-    @media screen and (min-width: 946px) {
+    @media screen and (#{$DesktopBreakpoint}) {
       aside img {
         width: 80%;
       }
@@ -545,7 +545,7 @@
     p, ul, ol, li {
       padding-left: 6.93742757%;
 
-      @media screen and (min-width: 946px) {
+      @media screen and (#{$DesktopBreakpoint}) {
         padding-left: 3.5%;
       }
 
@@ -624,6 +624,14 @@
           width: 75%;
           margin: .5em;
           font-family: 'Lora', serif;
+          -webkit-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+
+          &:hover {
+            background: #3D6F51;
+            background-image: -webkit-linear-gradient(top, #45884e 0%, #55aa61 50%, #ffffff 300%);
+            background-image: linear-gradient(to bottom, #45884e 0%, #55aa61 50%, #ffffff 300%);
+          }
         }
 
         &:not(#send-button) {
@@ -686,7 +694,7 @@
       }
     }
 
-    @media screen and (min-width: 767px) {
+    @media screen and (#{$IpadBreakpoint}) {
 
       #contact-box {
         float: left;

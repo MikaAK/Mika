@@ -56,7 +56,7 @@ $(document).ready(function() {
 
   wrap_element_link_mobile($mainLogo, '/');
   resize_section();
-  button_down('.darkgreen-button');
+  button_down('.project-year + .darkgreen-button');
 
   $window.resize(function() {
     wrap_element_link_mobile($mainLogo, '/');
