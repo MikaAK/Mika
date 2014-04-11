@@ -21,7 +21,7 @@
         %p.project-year Creation Year: #{@projects.last.year}
 
         %button.darkgreen-button
-          = link_to 'View Details', project_path(@projects.last), :class => 'project-link'
+          = link_to 'View Project', @projects.last.link, :class => 'project-link', :target => '_blank'
 
   - else
     #section-container
@@ -36,7 +36,7 @@
             %p.project-year Creation Year: #{project.year}
 
             %button.darkgreen-button
-              = link_to 'View Details', project_path(project), :class => 'project-link'
+              = link_to 'View Project', project.link, :class => 'project-link', :target => '_blank'
         - else
           .project-box
             %h3.project-name #{project.name}
@@ -47,4 +47,4 @@
             %p.project-year Creation Year: #{project.year}
 
             %button.darkgreen-button
-              = link_to 'View Details', project_path(project), :class => 'project-link'
+              = link_to 'View Project', project.link, :class => 'project-link', :target => '_blank'
