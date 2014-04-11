@@ -619,25 +619,23 @@
         -webkit-border-radius: 5px;
         -moz-border-radius: 5px;
         border-radius: 5px;
+        width: 65%;
+        font-family: 'Lora', serif;
+        text-align: center;
+      }
 
-        &#send-button {
-          width: 75%;
-          margin: .5em;
-          font-family: 'Lora', serif;
-          -webkit-transition: all .2s ease-in-out;
-          transition: all .2s ease-in-out;
+      #send-button {
+        width: 75%;
+        margin-top: .5em;
+        font-family: 'Lora', serif;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
 
-          &:hover {
-            background: #3D6F51;
-            background-image: -webkit-linear-gradient(top, #45884e 0%, #55aa61 50%, #ffffff 300%);
-            background-image: linear-gradient(to bottom, #45884e 0%, #55aa61 50%, #ffffff 300%);
-          }
-        }
-
-        &:not(#send-button) {
-          width: 65%;
-          font-family: 'Lora', serif;
-          text-align: center;
+        &:hover {
+          margin-top: 13px;
+          background: #3D6F51;
+          background: -webkit-linear-gradient(top, #45884e 0%, #55aa61 50%, #ffffff 300%);
+          background: linear-gradient(to bottom, #45884e 0%, #55aa61 50%, #ffffff 300%);
         }
       }
     }
@@ -685,6 +683,10 @@
 
       #contact-box {
         width: 72%;
+
+        button#send-button:hover {
+          margin-bottom: -3px;
+        }
       }
     }
 
