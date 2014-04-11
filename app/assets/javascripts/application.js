@@ -35,6 +35,15 @@ function resize_section() {
   var sectionMinHeight = $(window).height() - $('header').height() - $('footer').height() - 7;
   $('section').css('min-height',sectionMinHeight);
 }
+
+function button_down(element) {
+  $element = $(element);
+  $element.hover(function () {
+    $(this).prev().addClass('button-down');
+  }, function () {
+    $(this).prev().removeClass('button-down');
+  });;
+}
 /* Functions For Web End
 =========================== */
 
@@ -47,7 +56,7 @@ $(document).ready(function() {
 
   wrap_element_link_mobile($mainLogo, '/');
   resize_section();
-  console.log('called');
+  button_down('.darkgreen-button');
 
   $window.resize(function() {
     wrap_element_link_mobile($mainLogo, '/');

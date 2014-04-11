@@ -58,12 +58,23 @@
           margin-top: 1em;
           margin-bottom: 1em;
           font-family: 'Lora', serif;
+          -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+
+          &.button-down {
+            margin-bottom: 21px;
+          }
+        }
+
+        button:hover {
+            margin-top: 0;
         }
 
         .project-link {
           font-size: .9em;
           color: #EEBE6B;
           font-family: 'Lora', serif;
+
         }
       }
     }
