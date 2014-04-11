@@ -23,10 +23,10 @@ var $window = $(window);
 
 function wrap_element_link_mobile(object, path) {
 
-  if($(this).width() < 921 && !object.parent().is('a')) {
+  if($(this).width() < 768 && !object.parent().is('a')) {
     object.wrap("<a href='" +  path + "'></a>");
   }
-  else if($(this).width() > 920 && object.parent().is('a')){
+  else if($(this).width() > 767 && object.parent().is('a')){
     object.unwrap();
   }
 }

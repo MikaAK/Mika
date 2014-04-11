@@ -22,8 +22,16 @@ header {
       li:first-child {
         margin: 0 .5em 0 -.5em;
 
-        a:hover img{
-          -webkit-filter: brightness(70%);
+        a {
+          &:hover img {
+          -webkit-filter: brightness(70%) blur(1px);
+          filter: brightness(70%) blur(1px);
+          }
+
+          img {
+            -webkit-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+          }
         }
 
         #main-logo {

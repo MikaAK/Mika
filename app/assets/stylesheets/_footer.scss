@@ -24,10 +24,6 @@ footer {
       position: relative;
       margin-top: -3px;
 
-      &:first-child {
-        margin-left: 1em;
-      }
-
       img {
         position: absolute;
         bottom: -2px;
@@ -35,15 +31,21 @@ footer {
       }
     }
 
+    li:first-child {
+      margin-left: 1em;
+      float: left;
+    }
+
     nav {
       display: inline-block;
+      margin-right: 1em;
       float: right;
-      li {
-        &:first-child {
-          margin-right: 0em;
-        }
 
-        &:last-child{
+      li {
+        float: right;
+
+        &:first-child {
+          margin-left: 0;
           margin-right: 1em;
         }
       }
@@ -58,6 +60,13 @@ footer {
       opacity: 0;
     }
   }
+
+  @media screen and (max-width: 328px) {
+    ul nav li:first-child {
+      margin-right: 0em;
+    }
+  }
+
   @media screen and (min-width: 348px) {
     li {
       font-size: 1em;

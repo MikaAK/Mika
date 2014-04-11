@@ -2,23 +2,32 @@
 ========================== */
 .projects {
   &#home {
+
+    &:before {
+      content: '';
+      display: block;
+      height: 1em;
+    }
+
     #section-container {
-      padding-top: 1.5em;
+      margin: 0 auto;
+      width: 80%;
+
       &.no-items {
-        display: table;
-        height: 52em;
         margin: 0 auto;
+        width: 68%;
+        max-width: 600px;
+        margin-top: 12.466124661%;
       }
 
       .project-box {
-        height: 20em;
-        width: 70%;
-        margin: 0 auto;
-        margin-top: 1.5em;
         text-align: center;
+        margin-left: auto;
+        margin-right: auto;
         border: 2px solid #624E2C;
         border-radius: 15px;
-        max-width: 330px;
+        height: 20em;
+        margin-bottom: 1em;
         background: -webkit-linear-gradient(top, rgba(255,255,255,0) -1%,
                                                  rgba(255,255,255,0.01) 4%,
                                                  rgba(255,255,255,0.15) 49%,
@@ -30,22 +39,19 @@
                                          rgba(255,255,255,0.2) 77%,
                                          rgba(255,255,255,0.3) 100%);
 
-        &:not(:first-of-type) {
-          margin-top: 1.5em;
-        }
-
         .project-name {
-          padding: 1.5em;
+          margin-top: 1em;
           font-family: 'Tienne', serif;
         }
 
         .project-description {
+          margin-top: 1em;
+          height: 11em;
           text-overflow: auto;
-          height: 9em;
         }
 
         .project-year {
-          margin: 1em;
+          margin: 1em 0;
           font-family: 'Lora', serif;
         }
 
@@ -56,61 +62,58 @@
         }
       }
     }
+    /* Mobile Small Breakpoint
+    ============================= */
+    @media screen and (min-width: 415px) {
+      #section-container {
+        &.no-items {
 
-    @media screen and (max-width: 485px) {
-      .project-box {
-        margin-top: 1em;
-      }
-    }
-    /* Mobile Exlusive Styles
-    ============================ */
-    @media screen and (max-width: 767px) {
-      #section-container.no-items {
-        height: 20em;
+        }
+
+        .project-box {
+          width: 65%;
+        }
       }
     }
     /* Ipad to Desktop Styles
     ============================ */
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 767px) {
       #section-container {
-        width: 76.822916666%;
-        margin-left: 23.177083333%;
 
         &.no-items {
-          height: 40em;
         }
 
         &:not(.no-items) {
           .project-box {
-            width: 35%;
-            max-width: 367px;
+            width: 45%;
             display: inline-block;
-            padding: 0;
-
 
             &:nth-of-type(2n+2) {
-              margin-left: 2%;
+              margin-left: 7.960199004%;
             }
 
             &.single-item:nth-of-type(odd) {
-              margin-left: 18.229166666%;
+              margin-left: 27.624309392%;
             }
           }
         }
       }
     }
-  }
 
+        /* Desktop to LG Styles
+    ========================== */
+    @media screen and (min-width: 992px) {
+      #section-container {
+        width: 60%;
+      }
+    }
 
-  /* Desktop to LG Styles
-  ========================== */
-  @media screen and (min-width: 992px) {
-
-  }
-
-  /* LG > Styles
-  ================= */
-  @media screen and (min-width: 1200px) {
-
+    /* LG > Styles
+    ================= */
+    @media screen and (min-width: 1600px) {
+      #section-container {
+        width: 45%;
+      }
+    }
   }
 }

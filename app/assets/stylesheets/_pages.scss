@@ -4,10 +4,10 @@
   }
 
   100% {
-    right: 500px;
+    top: 63%;
+    right: 0;
   }
 }
-
 /* Golbal Static Pages Styling
 ================================= */
 .pages {
@@ -24,6 +24,7 @@
       text-align: center;
       padding-top: 5em;
     }
+
     .tab-pane#favorite {
       .tab-text {
         p {
@@ -34,10 +35,10 @@
           padding-top: .5em;
           display: block;
           a {
-            color: #AE843D;
+            color: #FBC459;
             font-size: .9em;
             &:hover {
-              color: #EEBE6B;
+              color: #FDE54D;
             }
           }
         }
@@ -59,6 +60,9 @@
     /* Mobile Exlusive Styles
     ============================ */
     @media screen and (max-width: 767px) {
+      h2 {
+        padding-top: 2em;
+      }
 
       .tab-content {
         min-height: 15em;
@@ -104,6 +108,10 @@
             display: table-cell;
             vertical-align: middle;
             margin: 0 auto;
+
+            &:first-of-type {
+              margin-top: 2.5em;
+            }
           }
         }
       }
@@ -121,6 +129,8 @@
           font-size: .85em;
           border-top-right-radius: 10px;
           border-top-left-radius: 10px;
+          -webkit-transition: all .5s ease-in-out;
+          transition: all .5s ease-in-out;
 
           &:not(.active) {
             background : -webkit-linear-gradient(-90deg, rgba(121, 85, 48, 1) 0%,
@@ -200,6 +210,8 @@
             position: absolute;
 
             &:first-child {
+              -webkit-animation: first 4s;
+              animation: first 4s;
               background : radial-gradient(50% 50%, circle farthest-corner, rgba(98, 78, 44, 1) 0%,
                                                                             rgba(98, 78, 44, 0.66) 85.3%,
                                                                             rgba(98, 78, 44, 0.6) 100%);
@@ -209,10 +221,6 @@
               top: 0;
               right: 50%;
               margin-right: -50px;
-              animation-name: first;
-              animation-duration: 3s;
-              -webkit-animation-name: first;
-              -webkit-animation-duration: 3s;
               a {
                 width: 4em;
                 padding: 2em 1em
@@ -364,9 +372,9 @@
 
     /* Desktop larger Styles
     =========================== */
-    @media only screen and (min-width: 1354px) {
+    @media only screen and (min-width: 1280px) {
       h2 {
-        padding-top: 11%;
+        padding-top: 5.433102%;
       }
     }
 
@@ -647,6 +655,18 @@
         text-align: center;
         width: 50%;
         margin-bottom: 1em;
+
+        a {
+          img {
+            -webkit-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+          }
+
+          &:hover img{
+            -webkit-filter: blur(3px) brightness(70%);
+            filter: blur(3px) brightness(70%);
+          }
+        }
       }
     }
 
@@ -664,9 +684,7 @@
           }
         }
       }
-    }
 
-    @media screen and (max-width: 766px) {
       #contact-box {
         width: 72%;
       }
@@ -707,6 +725,19 @@
 
         div {
           margin-top: 2em;
+
+          img {
+            width: 60%;
+            max-width: 156px;
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 1500px) {
+      #socialmedia-images {
+        img {
+          width: 25%;
         }
       }
     }
