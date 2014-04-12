@@ -149,8 +149,8 @@
           }
 
           a {
-          color: black;
-          width: 100%;
+            color: black;
+            width: 100%;
 
             &:hover {
               color: black;
@@ -166,6 +166,10 @@
       h2 {
         font-size: 2em;
         padding-top: 3em;
+      }
+
+      .tab-selection {
+        margin-top: 5%;
       }
     }
 
@@ -185,6 +189,7 @@
         padding-top: 7.92864222%;
 
         ul.tab-selection {
+          margin: 0;
           width: 38.338926174%;
           float: right;
           position: relative;
@@ -198,27 +203,45 @@
             -moz-border-radius: 50%;
             border-radius: 50%;
             position: absolute;
+            -webkit-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
+
+            &:hover {
+              -webkit-transform: scale(1.2, 1.2);
+              transform: scale(1.2, 1.2);
+              -webkit-filter: brightness(80%);
+              filter: brightness(80%);
+            }
+
+            // &.current-projects {
+            //   -webkit-animation: first-smallest 5s infinite ease-in-out;
+            //   animation: first-smallest 5s infinite ease-in-out;
+            // }
+
+            // &.secret {
+            //   -webkit-animation: second-smallest 5s infinite ease-in-out;
+            //   animation: second-smallest 5s infinite ease-in-out;
+            // }
+
+            // &.favorite {
+            //   -webkit-animation: third-smallest 5s infinite ease-in-out;
+            //   animation: third-smallest 5s infinite ease-in-out;
+            // }
 
             &:first-child {
-              -webkit-animation: first 4s;
-              animation: first 4s;
               background : radial-gradient(50% 50%, circle farthest-corner, rgba(98, 78, 44, 1) 0%,
                                                                             rgba(98, 78, 44, 0.66) 85.3%,
                                                                             rgba(98, 78, 44, 0.6) 100%);
               background : -webkit-radial-gradient(50% 50%, circle farthest-corner, rgba(98, 78, 44, 1) 0%,
                                                                                     rgba(98, 78, 44, 0.66) 85.3%,
                                                                                     rgba(98, 78, 44, 0.6) 100%);
-              top: 0;
+
               right: 50%;
-              margin-right: -50px;
-              a {
-                width: 4em;
-                padding: 2em 1em
-              }
+              -webkit-transform: translateX(50%);
+              transform: translateX(50%);
             }
 
             &:not(:first-child){
-              bottom: 1.5em;
             }
 
 
@@ -230,6 +253,10 @@
                                                                                    rgba(121, 85, 48, 0.66) 85.3%,
                                                                                    rgba(121, 85, 48, 0.6) 100%);
               filter: progid:DXImageTransform.Microsoft.Alpha(Stlye=2);
+              top: 100%;
+              -webkit-transform: translateY(-100%);
+              transform: translateY(-100%);
+
             }
 
             &:last-child {
@@ -240,23 +267,16 @@
                                                                                     rgba(111, 68, 44, 0.66) 85.3%,
                                                                                     rgba(111, 68, 44, 0.6) 100%);
               filter: progid:DXImageTransform.Microsoft.Alpha(Stlye=2);
-              right: 0;
-
-              a {
-                left: 3px;
-                padding: 2em 1em;
-              }
+              top: 100%;
+              right: 0%;
+              -webkit-transform: translateY(-100%);
+              transform: translateY(-100%);
             }
 
             a {
-              position: absolute;
-              right: 0;
-              left: 0;
-              top: 0;
               font-family: 'Lora', serif;
               color: #AE843D;
-              text-shadow: 0 -1px 0 black;
-              padding: 1.5em 1em;
+              padding: 1em .5em;
 
               &:hover {
                 color: #3D6F51;
@@ -275,6 +295,8 @@
           border-radius: 5px;
           -webkit-border-radius: 5px;
           -moz-border-radius: 5px;
+          -webkit-transition: all .5s ease-in-out;
+          transition: all .5s ease-in-out;
 
           h3 {
             margin-left: 3.107344632%;
@@ -311,25 +333,22 @@
       }
       .info-box {
         ul.tab-selection {
-          min-height: 25em;
-          margin-top: -2em;
 
           li {
-            height: 7em;
-            width: 7em;
+
+            &.current-projects {
+              // -webkit-animation: first-medium 5s infinite ease-in-out;
+              // animation: first-medium 5s infinite ease-in-out;
+            }
 
             &:nth-child(2) a {
-              padding: 1.5em 1em;
             }
 
             &:last-child a {
-              padding: 2.2em 1em;
 
             }
 
             a {
-              padding: 2em 1em;
-              font-size: 1.2em;
             }
           }
         }
@@ -341,30 +360,51 @@
     @media only screen and (min-width: 1023px) {
       .info-box {
         ul.tab-selection {
-          min-height: 25em;
-          margin-top: -2em;
 
           li {
-            height: 8em;
-            width: 8em;
 
             &:first-child a {
-              padding: 2.1em 1.2em;
+
             }
 
             a {
-              font-size: 1.3em;
+
             }
           }
         }
       }
     }
 
+    @media only screen and (min-width: 1071px) and (min-height: 612px) {
+      h2 {
+        padding-top: 3.433102%;
+      }
+
+      .info-box {
+        padding-top: 1.928642%;
+
+        ul.tab-selection {
+        }
+      }
+    }
     /* Desktop larger Styles
     =========================== */
     @media only screen and (min-width: 1280px) {
       h2 {
         padding-top: 5.433102%;
+      }
+    }
+
+    @media screen and (max-width: 1455px) and (min-width: 1072px) and (min-height: 830px) {
+      h2 {
+        padding-top: 9.928642%;
+      }
+
+      .info-box {
+        padding-top: 9.928642%;
+
+        ul.tab-selection {
+        }
       }
     }
 
@@ -380,8 +420,6 @@
         padding-top: 6.154747948%;
 
           ul.tab-selection {
-            min-height: 30em;
-            margin-top: -3em;
           }
 
           .tab-content {
@@ -395,8 +433,6 @@
     @media only screen and (min-width: 1700px) {
       .info-box {
         ul.tab-selection {
-          min-height: 35em;
-          margin-top: -5em;
         }
       }
     }
@@ -765,5 +801,166 @@
     content: "";
     display: table;
     clear: both;
+  }
+}
+
+@-webkit-keyframes first-smallest {
+  0% {
+    right: 56%;
+  }
+
+  33% {
+    top: 62%;
+    right: 27%;
+  }
+
+  66% {
+    top: 62%;
+    right: 87%;
+  }
+
+  100% {
+    top: 0;
+    right: 56%;
+  }
+}
+
+@keyframes first-smallest {
+  0% {
+    right: 56%;
+  }
+
+  33% {
+    top: 62%;
+    right: 20%;
+  }
+
+  66% {
+    top: 62%;
+    right: 87%;
+  }
+
+  100% {
+    top: 0;
+    right: 56%;
+  }
+}
+
+@-webkit-keyframes first-medium {
+  0% {
+    right: 50%;
+  }
+
+  33% {
+    top: 70%;
+    right: 12%;
+  }
+
+  66% {
+    top: 70%;
+    right: 82%;
+  }
+
+  100% {
+    top: 0;
+    right: 50%;
+  }
+}
+
+@keyframes first-medium {
+  0% {
+    right: 50%;
+  }
+
+  33% {
+    top: 62%;
+    right: 20%;
+  }
+
+  66% {
+    top: 62%;
+    right: 60%;
+  }
+
+  100% {
+    right: 50%;
+  }
+}
+
+@-webkit-keyframes second-smallest {
+  0% {
+    right: 62%;
+    bottom: 1.5em;
+  }
+
+  33% {
+    right: 32%;
+    bottom: 70%;
+  }
+
+  66% {
+    right: 0%;
+    bottom: 1.5em;
+  }
+
+  100% {
+    right: 62%;
+    bottom: 1.5em;
+  }
+}
+
+@keyframes second-smallest {
+  0% {
+    right: 62%;
+    bottom: 1.5em;
+  }
+
+  33% {
+    right: 32%;
+    bottom: 70%;
+  }
+
+  66% {
+    right: 0%;
+    bottom: 1.5em;
+  }
+
+  100% {
+    right: 62%;
+    bottom: 1.5em;
+  }
+}
+
+@-webkit-keyframes third-smallest {
+  0% {
+    bottom: 1.5em;
+    right: 0;
+  }
+
+  33% {
+    right: 62%;
+    bottom: 1.5em;
+  }
+
+  66% {
+    right: 32%;
+    bottom: 70%;
+  }
+}
+
+@keyframes third-smallest {
+  0% {
+    bottom: 1.5em;
+    right: 0;
+  }
+
+  33% {
+    right: 62%;
+    bottom: 1.5em;
+  }
+
+  66% {
+    right: 32%;
+    bottom: 70%;
   }
 }
