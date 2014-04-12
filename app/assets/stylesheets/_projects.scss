@@ -60,10 +60,6 @@
           font-family: 'Lora', serif;
           -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
-
-          &.button-down {
-            margin-bottom: 20px;
-          }
         }
 
         button {
@@ -72,6 +68,8 @@
 
           &:hover {
             margin-top: 0;
+            -webkit-transform: translateY(5px);
+            transform: translateY(5px);
           }
         }
 

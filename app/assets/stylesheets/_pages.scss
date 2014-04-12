@@ -662,7 +662,8 @@
         transition: all .2s ease-in-out;
 
         &:hover {
-          margin-top: 13px;
+          -webkit-transform: translateY(5px);
+          transform: translateY(5px);
           background: #3D6F51;
           background: -webkit-linear-gradient(top, #45884e 0%, #55aa61 50%, #ffffff 300%);
           background: linear-gradient(to bottom, #45884e 0%, #55aa61 50%, #ffffff 300%);
