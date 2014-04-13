@@ -212,10 +212,23 @@
             &:hover, &.active{
               -webkit-transform: scale(1.2);
               transform: scale(1.2);
-              -webkit-filter: brightness(80%);
-              filter: brightness(80%);
+              -webkit-filter: brightness(70%);
+              filter: brightness(70%);
+              height: 7.5em;
+              width: 7.5em;
+
               a {
                 color: #FDE54D;
+
+                &#current-projects, &#secret {
+                  padding-top: 34%;
+                  height: 65%;
+                }
+
+                &#favorite {
+                  padding-top: 37%;
+                  height: 63%;
+                }
               }
             }
 
@@ -351,6 +364,26 @@
       .info-box ul.tab-selection li {
         width: 8em;
         height: 8em;
+
+        &.current-project, &.favorite {
+
+          a {
+            padding-top: 38%;
+            height: 62%;
+          }
+        }
+
+        &.secret {
+          a {
+            padding-top: 35%;
+            height: 62%;
+          }
+        }
+
+        &:hover, &.active{
+          height: 9em;
+          width: 9em;
+        }
       }
     }
 
@@ -660,14 +693,6 @@
         font-family: 'Lora', serif;
         -webkit-transition: all .2s ease-in-out;
         transition: all .2s ease-in-out;
-
-        &:hover {
-          -webkit-transform: translateY(5px);
-          transform: translateY(5px);
-          background: #3D6F51;
-          background: -webkit-linear-gradient(top, #45884e 0%, #55aa61 50%, #ffffff 300%);
-          background: linear-gradient(to bottom, #45884e 0%, #55aa61 50%, #ffffff 300%);
-        }
       }
     }
 
