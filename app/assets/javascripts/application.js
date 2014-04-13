@@ -88,6 +88,17 @@ function show_box() {
     );
   }
 }
+
+function set_tab () {
+  if($window.width() < 767) {
+    $('.tab-content').show();
+  }
+  else {
+    $('.tab-content').hide();
+    $('.active').removeClass('active');
+    $('.tab-selection').css('right', '29.337803855%');
+  }
+}
 /* Functions For Web End
 =========================== */
 
@@ -110,5 +121,6 @@ $(document).ready(function() {
   $window.resize(function() {
     resize_section();
     wrap_element_link_mobile($mainLogo, '/');
+    set_tab();
   });
 });
