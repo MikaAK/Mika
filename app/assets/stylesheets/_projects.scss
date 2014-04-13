@@ -3,6 +3,22 @@
 .projects {
   &#home {
 
+    & > h3 {
+      text-align: center;
+      padding-top: 1em;
+      padding-bottom: 2em;
+      color: #45884E;
+      text-shadow: 2px 2px rgba(0,0,0, .5);
+
+      a{
+        color: #3D6F51;
+
+        &:hover {
+          color: #EEBE6B;
+        }
+      }
+    }
+
     &:before {
       content: '';
       display: block;
