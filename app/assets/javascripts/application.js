@@ -67,6 +67,7 @@ function triangle_animation() {
 
 function show_box() {
   if($(window).width() > 768) {
+    $('.current-projects').removeClass('active');
     $('.tab-content').hide(0,
       function() {
         $(this).prev().css('right', '29.337803855%');
@@ -87,16 +88,10 @@ function show_box() {
       }
     );
   }
-}
-
-function set_tab () {
-  if($window.width() < 767) {
-    $('.tab-content').show();
-  }
   else {
-    $('.tab-content').hide();
-    $('.active').removeClass('active');
-    $('.tab-selection').css('right', '29.337803855%');
+    console.log('log')
+    $('.tab-content').show();
+    $('.current-projects').addClass('active');
   }
 }
 /* Functions For Web End
@@ -115,12 +110,11 @@ $(document).ready(function() {
   button_down('.project-year + .darkgreen-button');
 
   if($window.width() > 767) {
-    $('.current-projects').removeClass('active');
   }
 
   $window.resize(function() {
     resize_section();
+    show_box();
     wrap_element_link_mobile($mainLogo, '/');
-    set_tab();
   });
 });
