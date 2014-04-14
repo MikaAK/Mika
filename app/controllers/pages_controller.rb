@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @current_uri = request.env['PATH_INFO']
   end
 
   def contact
