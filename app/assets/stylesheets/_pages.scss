@@ -120,6 +120,12 @@
 
       .tab-selection {
         text-align: center;
+        -webkit-display: flex;
+        -webkit-justify-content: center;
+        -moz-display: flex;
+        -moz-justify-content: center;
+        -ms-display: flex;
+        -ms-justify-content: center;
         display: flex;
         justify-content: center;
         margin-bottom: 0;
@@ -752,10 +758,6 @@
 
       #contact-box {
         width: 72%;
-
-        button#send-button:hover {
-          margin-bottom: -3px;
-        }
       }
     }
 

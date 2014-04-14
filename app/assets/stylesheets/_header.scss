@@ -58,6 +58,12 @@ header {
 
   nav {
     ul {
+      -webkit-display: flex;
+      -webkit-justify-content: space-between;
+      -moz-display: flex;
+      -moz-justify-content: space-between;
+      -ms-display: flex;
+      -ms-justify-content: space-between;
       display: flex;
       justify-content: space-between;
       margin: 0 1em;

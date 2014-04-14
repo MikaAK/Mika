@@ -1,0 +1,8 @@
+.no-flexbox {
+  header nav ul {
+    display: block;
+    li {
+      display: inline-block;
+    }
+  }
+}
