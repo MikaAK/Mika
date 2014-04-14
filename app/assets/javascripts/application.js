@@ -11,8 +11,6 @@
 // about supported directives.
 //
 //
-//= require jquery
-//= require jquery_ujs
 //= require analytics.js.coffee
 //= require turbolinks
 //= require bootstrap.min
@@ -20,7 +18,7 @@
 /* Functions For Web Start
 ============================= */
 var $window = $(window);
-
+var _animation_has_run = false;
 
 function wrap_element_link_mobile(object, path) {
 
@@ -66,32 +64,53 @@ function triangle_animation() {
 }
 
 function show_box() {
-  if($(window).width() > 768) {
+  if($(window).width() > 768 && _animation_has_run === false) {
+
     $('.current-projects').removeClass('active');
-    $('.tab-content').hide(0,
-      function() {
-        $(this).prev().css('right', '29.337803855%');
-        $triangleItems = $([$('.current-projects'), $('.secret'), $('.favorite')]);
 
+    $('.tab-content').hide(0, function() {
 
-        $(this).prev().children().children().click(function () {
-          console.log('First');
+      $(this).prev().css('right', '29.337803855%');
+      $triangleItems = $([$('.current-projects'), $('.secret'), $('.favorite')]);
+
+      $('li').click(function () {
+        if (_animation_has_run === false) {
 
           $triangleItems.each(function() {
-            $(this).off('mouseenter').css('-webkit-animation-play-state', 'running');
+            $(this).css('-webkit-animation-play-state', 'running');
+            $(this).on('mouseenter', function() {
+              $triangleItems.each(function() {
+                $(this).off('mouseenter');
+                $(this).css('-webkit-animation-play-state', 'running');
+              });
+            });
           });
+        }
+        $(this).parent().animate({right: 0}, {
+          duration: 3000,
+          queue: false,
+          complete: function() {
 
-          $('.tab-selection').animate({right: 0}, 3000).queue(function() {
-              $('.tab-content').show(1000);
-          });
+            $('.tab-content').show(1000);
+            $triangleItems.each(function() {
+              $(this).on('mouseenter', triangle_animation());
+            });
+            _animation_has_run = true;
+          }
         });
-      }
-    );
+      });
+    });
+    console.log('hitFlagtrue');
   }
+
   else {
-    console.log('log')
+
+    if($('li').hasClass('active')) {
+    }
+    else {
+      $('.current-projects').addClass('active');
+    }
     $('.tab-content').show();
-    $('.current-projects').addClass('active');
   }
 }
 /* Functions For Web End
@@ -102,19 +121,16 @@ function show_box() {
 ================================ */
 $(document).ready(function() {
   var $mainLogo = $('#main-logo');
-
   show_box();
+  console.log(_animation_has_run);
   triangle_animation();
   wrap_element_link_mobile($mainLogo, '/');
   resize_section();
   button_down('.project-year + .darkgreen-button');
 
-  if($window.width() > 767) {
-  }
-
   $window.resize(function() {
     resize_section();
-    show_box();
+    show_box(_animation_has_run);
     wrap_element_link_mobile($mainLogo, '/');
   });
 });

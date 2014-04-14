@@ -15,22 +15,29 @@
       padding-top: 5em;
     }
 
-    .tab-pane#favorite {
-      .tab-text {
-        p {
-          display: block;
-        }
+    .tab-pane {
+      h3 {
+        color: #45884E;
+        text-shadow: 2px 2px 20px rgba(0,0,0,1);
+      }
 
-        li {
-          padding-top: .5em;
-          display: block;
+      &#favorite {
+        .tab-text {
+          p {
+            display: block;
+          }
 
-          a {
-            color: #FBC459;
-            font-size: .9em;
+          li {
+            padding-top: .5em;
+            display: block;
 
-            &:hover {
-              color: #FDE54D;
+            a {
+              color: #FBC459;
+              font-size: .9em;
+
+              &:hover {
+                color: #FFD58C;
+              }
             }
           }
         }
