@@ -763,7 +763,7 @@
 
       #contact-box {
         float: left;
-        margin-top: 13.559838274%;
+        margin-top: 5.559838274%;
         margin-left: 6.984866123%;
         // -webkit-border-radius: 10%;
         // -moz-border-radius: 10%;
@@ -784,7 +784,7 @@
 
       #socialmedia-images {
 
-        padding-top: 18.559838274%;
+        padding-top: 10.559838274%;
 
         div {
           margin-top: 2em;
@@ -807,7 +807,10 @@
 
     @media screen and (min-width: 1236px) and (max-height: 749px) {
       #contact-box {
-        margin-top: 0;
+        margin-top: 1.645643%;
+      }
+      #socialmedia-images {
+        padding-top: 5.645643%
       }
     }
 
