@@ -66,7 +66,7 @@ function triangle_animation() {
 function show_box() {
   if($(window).width() > 768 && _animation_has_run === false) {
 
-    $('.current-projects').removeClass('active');
+    $('li').removeClass('active');
 
     $('.tab-content').hide(0, function() {
 
