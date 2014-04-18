@@ -20,7 +20,7 @@ function triangle_animation() {
 }
 
 function show_box() {
-  if($(window).width() > 768 && _animation_has_run === false) {
+  if($(window).width() > 768 && !_animation_has_run) {
 
     $('li').removeClass('active');
 

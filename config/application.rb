@@ -24,6 +24,7 @@ module Mika
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
+    config.action_dispatch.cookies_serializer = :hybrid
 
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
@@ -38,6 +39,6 @@ module Mika
     config.action_mailer.raise_delivery_errors = true
     config.action_mailer.register_template_extension('haml')
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
-
+    config.action_mailer.preview_path = "#{Rails.root}/spec/mailers/mailer_previews/"
   end
 end

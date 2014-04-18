@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 #ruby-gemset=Website
 
-gem 'rails', '4.0.2'
+gem 'rails', '4.1.0'
 gem 'bcrypt'
 gem 'sitemap_generator'
 gem 'factory_girl_rails'
@@ -14,6 +14,7 @@ group :development, :test do
   gem 'guard-spork', '1.5.1'
   gem 'childprocess'
   gem 'sqlite3'
+  gem 'spring'
 end
 
 group :test do
