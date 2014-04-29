@@ -1,5 +1,5 @@
 - if flash.any?
   - flash.each do |name, msg|
-    .flash{:class => 'flash-name'}
+    .flash{:id => name}
       = debug(params) if Rails.env.development?
       = msg

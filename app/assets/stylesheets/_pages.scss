@@ -712,6 +712,16 @@
         font-family: 'Lora', serif;
         -webkit-transition: all .2s ease-in-out;
         transition: all .2s ease-in-out;
+
+        @media screen and (max-width: 767px) {
+          -webkit-box-shadow:  0px 6px 25px rgba(0, 0, 0, 0.7);
+          box-shadow:  0px 6px 25px rgba(0, 0, 0, 0.7);
+
+          &:hover {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+          }
+        }
       }
     }
 
