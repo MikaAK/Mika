@@ -661,7 +661,19 @@
   }
 
   &#contact {
+    #error-explination {
+      font-family: 'Lora', serif;
+      font-weight: bold;
 
+      & li {
+        font-weight: normal;
+      }
+    }
+
+    #notice {
+      font-family: 'Lora', serif;
+    }
+    
     #contact-box {
       text-align: center;
       margin: 0 auto;
