@@ -1,0 +1,2 @@
+$("#new_message").replaceWith("#{j(render partial:'contact_mailer/contact_me', locals: {object: @message, notice: @notice} )}")
+console.log($('#new_message').form())

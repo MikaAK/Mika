@@ -35,7 +35,7 @@ module Mika
         password: ENV['MANDRILL_PASSWORD'],
         authentication: "plain"
     }
-    config.action_mailer.perform_deliveries = true
+    # config.action_mailer.perform_deliveries = true
     config.action_mailer.raise_delivery_errors = true
     config.action_mailer.register_template_extension('haml')
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)

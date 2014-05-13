@@ -1,6 +1,7 @@
+/ Load JavaScript for current Page
 - if defined? @current_uri 
   - case @current_uri 
     - when '/'
       = javascript_include_tag 'pages/home'
-    - when '/contact'
-      = javascript_include_tag 'pages/contact'
+    -# - when '/contact'
+    -#   = javascript_include_tag 'pages/contact'
