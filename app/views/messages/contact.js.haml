@@ -1,2 +1,3 @@
 $("#new_message").replaceWith("#{j(render partial:'contact_mailer/contact_me', locals: {object: @message, notice: @notice} )}")
-console.log($('#new_message').form())
+- if !@message.errors.any? 
+  $(':input').not(':button, :submit, :hidden').val('') 
