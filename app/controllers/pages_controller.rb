@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
+
   def home
-    @current_uri = request.env['PATH_INFO']
+
   end
 
   def contact
@@ -16,4 +17,5 @@ class PagesController < ApplicationController
 
   def terms_of_service
   end
+  
 end

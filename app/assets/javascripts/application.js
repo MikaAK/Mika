@@ -12,6 +12,5 @@
 //
 //
 //= require analytics.js.coffee
-//= require turbolinks
 //= require bootstrap.min
 //= require_tree ./global

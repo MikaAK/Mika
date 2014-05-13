@@ -56,7 +56,6 @@ function show_box() {
         });
       });
     });
-    console.log('hitFlagtrue');
   }
 
   else {

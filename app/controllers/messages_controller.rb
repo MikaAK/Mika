@@ -1,11 +1,15 @@
 class MessagesController < ApplicationController
   def contact
     @message = Message.new(params[:message])
-    if @message.valid?
-      ContactMailer.contact_me(@message)
-      redirect_to contact_path, :notice => 'Message was sent successfully.'
-    else
-      render :file => 'pages/contact'
+    respond_to do |format|
+      if @message.valid?
+        ContactMailer.contact_me(@message)
+        format.html { redirect_to contact_path, notice: 'Message was sent successfully.' }
+        format.js { render nothing: true }																																																																																							
+      else
+        format.html { redirect_to contact_path }
+        format.js { render nothing: true }
+      end
     end
   end
 end

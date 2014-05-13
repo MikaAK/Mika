@@ -58,13 +58,13 @@ header {
 
   nav {
     ul {
-      -webkit-display: flex;
+      display: -webkit-flex;
+      display: -moz-flex;  
+      display: -ms-flex;
+      display: flex;    
       -webkit-justify-content: space-between;
-      -moz-display: flex;
       -moz-justify-content: space-between;
-      -ms-display: flex;
       -ms-justify-content: space-between;
-      display: flex;
       justify-content: space-between;
       margin: 0 1em;
 
@@ -146,8 +146,14 @@ header {
 
   /* Ipad to Desktop Styles
   ============================ */
-  @media screen and (min-width: 921px) {
-    display: flex;
+  @media screen and (min-width: 921px) {    
+    display: -webkit-flex;
+    display: -moz-flex;  
+    display: -ms-flex;
+    display: flex;    
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
     justify-content: space-between;
 
     .header-logo {
@@ -158,7 +164,7 @@ header {
     }
 
     nav {
-      margin-top: 2.1em;
+      margin-top: 2.5em;
       ul li {
         margin: 0 1em;
       }

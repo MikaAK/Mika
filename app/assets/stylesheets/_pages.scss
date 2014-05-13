@@ -120,13 +120,13 @@
 
       .tab-selection {
         text-align: center;
-        -webkit-display: flex;
+        display: -webkit-flex;
+        display: -moz-flex;  
+        display: -ms-flex;
+        display: flex;    
         -webkit-justify-content: center;
-        -moz-display: flex;
         -moz-justify-content: center;
-        -ms-display: flex;
         -ms-justify-content: center;
-        display: flex;
         justify-content: center;
         margin-bottom: 0;
         margin-top: 17%;
@@ -726,7 +726,13 @@
     }
 
     #socialmedia-images {
-      display: flex;
+      display: -webkit-flex;
+      display: -moz-flex;  
+      display: -ms-flex;
+      display: flex;   
+      -webkit-flex-flow: row wrap;
+      -moz-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
       flex-flow: row wrap;
       padding: 0 1em;
       justify-content: space-around;
