@@ -757,13 +757,19 @@
 
         a {
           img {
+            -webkit-backface-visibility: hidden;
+            -webkit-perspective: 1000;
+            backface-visibility: hidden;
+            perspective: 1000;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
             -webkit-transition: all .5s ease-in-out;
             transition: all .5s ease-in-out;
           }
 
           &:hover img{
-            -webkit-filter: blur(3px) brightness(70%);
-            filter: blur(3px) brightness(70%);
+            -webkit-filter:  brightness(80%) blur(5px);
+            filter:  brightness(80%) blur(5px);
           }
         }
       }
