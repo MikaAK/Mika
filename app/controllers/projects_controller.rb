@@ -1,9 +1,6 @@
 class ProjectsController < ApplicationController
-  http_basic_authenticate_with :name => ENV["WEBSITE_USERNAME"],
-                               :password => ENV["WEBSITE_PASSWORD"],
-                               :only => ['edit', 'destroy', 'new']
 
-  before_action :index, :authenticate
+  before_filter :authenticate
 
   def index
     @projects = Project.all
@@ -14,11 +11,16 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @project = Project.find(params[:id])
+    render :file => 'public/404.html', :status => :not_found, :layout => false
+  end
+
+  def update
 
   end
 
-  def edit
-
+  def destroy
+    @project.destroy(params[:id])
   end
 
   def create

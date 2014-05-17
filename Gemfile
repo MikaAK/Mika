@@ -21,7 +21,6 @@ group :test do
   gem 'selenium-webdriver', '2.40.0'
   gem 'capybara'
   gem 'libnotify', '0.8.2'
-  gem 'pg', '0.17.1'
 end
 
 gem 'sass-rails', '4.0.3'
@@ -35,14 +34,17 @@ gem 'haml-rails'
 gem 'whenever'
 gem 'simple_form'
 # For recieving emails when I can set this up
-# gem 'mandrill-rails'
+gem 'mandrill-rails'
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
 end
 
+group :test, :production do 
+  gem 'pg', '0.17.1'
+end
+
 group :production do
   gem 'rails_12factor', '0.0.2'
-  gem 'pg', '0.17.1'
   gem 'heroku_rails_deflate'
 end

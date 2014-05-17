@@ -5,7 +5,6 @@
 
   %h3 All my mockups are available on #{link_to 'Dropbox', 'https://www.dropbox.com/sh/tdmxrykt1rnm95f/2z0C0E_f1s', :target => '_blank'}
   = render partial: 'admin/projects', locals: { utility: 'add' }
-
   - if @projects.count == 0
     #section-container.no-items
       .alert

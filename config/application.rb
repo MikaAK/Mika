@@ -32,7 +32,7 @@ module Mika
         port: 587,
         domain: 'mikakalathil.ca',
         user_name: "me@mikakalathil.ca",
-        password: ENV['MANDRILL_PASSWORD'],
+        password: ENV['MANDRILL_APIKEY'],
         authentication: "plain"
     }
     # config.action_mailer.perform_deliveries = true

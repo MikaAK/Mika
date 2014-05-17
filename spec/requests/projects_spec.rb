@@ -18,7 +18,7 @@ describe ProjectsController do
 
   describe 'New' do
 
-    before {  Capybara.app_host = "http://admin.domain.com"
+    before { Capybara.app_host = "http://admin.domain.com"
               visit new_project_path }
 
     let(:submit) { "Add Project" }
