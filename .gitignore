@@ -22,3 +22,5 @@ pickle-email-*.html
 *~
 .*~
 config/authentication.txt
+.DS_Store
+*.DS_Store
