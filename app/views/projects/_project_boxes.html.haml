@@ -1,0 +1,39 @@
+- if @projects.count == 0
+  #section-container.no-items
+    .alert
+      .inner
+        %p If your seeing this page either I haven't added any of my projects (which I should've) or my database is not working (more likely)! Please use the #{link_to 'contact', '/contact'} form and notify me!!
+- else
+  #section-container
+    = render 'layouts/flash'
+    - @projects.each do |project|
+      - if project == @projects.last
+        .project-box.single-item
+          - if request.subdomain == 'admin'
+            = link_to project_path(project.id), method: :delete, data: { :confirm => 'Are you sure you wish to deleted this project?' }, remote: true do
+              %button.delete
+
+          %h3.project-name #{project.name}
+
+          %article.project-description
+            %p #{project.description}
+
+          %p.project-year Creation Year: #{project.year}
+
+          %button.darkgreen-button
+            = link_to 'View Project', project.link, :class => 'project-link', :target => '_blank'
+      - else
+        .project-box
+          - if request.subdomain == 'admin'
+            = link_to project_path(project.id), method: :delete, data: { :confirm => 'Are you sure you wish to deleted this project?' }, remote: true do
+              %button.delete
+
+          %h3.project-name #{project.name}
+
+          %article.project-description
+            %p #{project.description}
+
+          %p.project-year Creation Year: #{project.year}
+
+          %button.darkgreen-button
+            = link_to 'View Project', project.link, :class => 'project-link', :target => '_blank'

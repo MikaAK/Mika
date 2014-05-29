@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
   def contact
-    @message = Message.new(params[:message])
+    @message = Message.new(message_params)
     respond_to do |format|
       if @message.valid?
         flash.now[:notice] = 'Message was sent successfully.'
@@ -12,5 +12,9 @@ class MessagesController < ApplicationController
         format.js 
       end
     end
+  end
+
+  def message_params
+    params.require(:message).permit(:body, :email, :name, :subject)
   end
 end

@@ -1,39 +1,10 @@
 -provide :title, "Projects"
+= render partial: 'admin/projects', locals: { utility: 'addModal' }
+
 %section.projects#home
 
   = render 'layouts/flash'
 
   %h3 All my mockups are available on #{link_to 'Dropbox', 'https://www.dropbox.com/sh/tdmxrykt1rnm95f/2z0C0E_f1s', :target => '_blank'}
   = render partial: 'admin/projects', locals: { utility: 'add' }
-  - if @projects.count == 0
-    #section-container.no-items
-      .alert
-        .inner
-          %p If your seeing this page either I haven't added any of my projects (which I should've) or my database is not working (more likely)! Please use the #{link_to 'contact', '/contact'} form and notify me!!
-  - else
-    #section-container
-      - @projects.each do |project|
-        - if project == @projects.last
-          .project-box.single-item
-            = render partial: 'admin/projects', locals: { utility: "delete" }
-            %h3.project-name #{project.name}
-
-            %article.project-description
-              %p #{project.description}
-
-            %p.project-year Creation Year: #{project.year}
-
-            %button.darkgreen-button
-              = link_to 'View Project', project.link, :class => 'project-link', :target => '_blank'
-        - else
-          .project-box
-            = render partial: 'admin/projects', locals: { utility: "delete" }
-            %h3.project-name #{project.name}
-
-            %article.project-description
-              %p #{project.description}
-
-            %p.project-year Creation Year: #{project.year}
-
-            %button.darkgreen-button
-              = link_to 'View Project', project.link, :class => 'project-link', :target => '_blank'
+  = render 'projects/project_boxes'

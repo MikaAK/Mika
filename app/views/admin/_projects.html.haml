@@ -1,8 +1,13 @@
 - if request.subdomain == 'admin'
-  - case utility 
-
-    - when "delete"
-      %button.delete{ href: '#delete' }
+  - case utility
     - when "add"
-      %button.add{ href: '#add' }Add Projects
+      %a{ href: '#add' }
+        %button.add Add Projects
 
+    - when "addModal"
+      .modal#add
+        .modal-dialog
+          %a.close{ href: ''}
+          %h2 Add Projects
+
+          = render 'add_project'

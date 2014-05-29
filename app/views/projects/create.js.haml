@@ -1,0 +1,8 @@
+console.log('hit')
+- if !defined? @created
+  window.location.hash = ''
+  $("#section-container").remove()
+  $('#home h3 + a').after("#{j( render 'projects/project_boxes')}")
+- else
+  $('.modal-dialog').css('max-height', '30em')
+  $("#add-project").replaceWith("#{j(render 'projects/add_project')}")

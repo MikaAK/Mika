@@ -2,10 +2,9 @@
 %section.projects#new
   %h2 Add Projects
 
-  = form_for @project do |f|
-    = render 'layouts/error_messages.html.haml', object: f.object
-
   = form_for @project, :html => {id: 'add-project'} do |f|
+
+    = render 'layouts/error_messages.html.haml', object: f.object
 
     = f.label :name
     = f.text_field :name, :placeholder => 'Project name'

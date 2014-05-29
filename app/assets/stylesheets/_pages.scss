@@ -121,9 +121,9 @@
       .tab-selection {
         text-align: center;
         display: -webkit-flex;
-        display: -moz-flex;  
+        display: -moz-flex;
         display: -ms-flex;
-        display: flex;    
+        display: flex;
         -webkit-justify-content: center;
         -moz-justify-content: center;
         -ms-justify-content: center;
@@ -673,10 +673,10 @@
     #notice {
       font-family: 'Lora', serif;
     }
-    
+
     #contact-box {
       text-align: center;
-      margin: 0 auto;
+      margin: 0 auto 1.5em;
       width: 66%;
 
       .alert {
@@ -739,9 +739,9 @@
 
     #socialmedia-images {
       display: -webkit-flex;
-      display: -moz-flex;  
+      display: -moz-flex;
       display: -ms-flex;
-      display: flex;   
+      display: flex;
       -webkit-flex-flow: row wrap;
       -moz-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
