@@ -20,12 +20,13 @@ end
 group :test do
   gem 'selenium-webdriver', '2.40.0'
   gem 'capybara'
-  gem 'libnotify', '0.8.2'
+  gem 'growl'
 end
 
 gem 'sass-rails', '4.0.3'
 gem 'uglifier', '2.5.0'
 gem 'coffee-rails', '4.0.1'
+gem 'mailman'
 gem 'jquery-rails', '3.1.0'
 gem 'turbolinks', '2.2.2'
 gem 'jbuilder', '2.0.6'
@@ -40,7 +41,7 @@ group :doc do
   gem 'sdoc', '0.3.20', require: false
 end
 
-group :test, :production do 
+group :test, :production do
   gem 'pg', '0.17.1'
 end
 

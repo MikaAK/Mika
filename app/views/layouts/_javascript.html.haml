@@ -1,7 +1,8 @@
 / Load JavaScript for current Page
-- if defined? @current_uri 
-  - case @current_uri 
+- if defined? @current_uri
+  - case @current_uri
     - when '/'
       = javascript_include_tag 'pages/home'
+      -# = javascript_include_tag '//cdnjs.cloudflare.com/ajax/libs/velocity/0.0.9/jquery.velocity.min.js'
     -# - when '/contact'
     -#   = javascript_include_tag 'pages/contact'
