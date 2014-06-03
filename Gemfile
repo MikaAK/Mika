@@ -26,7 +26,7 @@ end
 gem 'sass-rails', '4.0.3'
 gem 'uglifier', '2.5.0'
 gem 'coffee-rails', '4.0.1'
-gem 'mailman'
+gem 'mailman-rails'
 gem 'jquery-rails', '3.1.0'
 gem 'turbolinks', '2.2.2'
 gem 'jbuilder', '2.0.6'

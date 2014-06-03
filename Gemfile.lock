@@ -114,6 +114,9 @@ GEM
       listen (>= 0.4.1)
       mail (>= 2.0.3)
       maildir (>= 0.5.0)
+    mailman-rails (0.0.3)
+      mailman
+      rails
     mandrill-rails (1.0.1)
       activesupport (>= 3.0.3)
     method_source (0.8.2)
@@ -255,7 +258,7 @@ DEPENDENCIES
   html2haml
   jbuilder (= 2.0.6)
   jquery-rails (= 3.1.0)
-  mailman
+  mailman-rails
   mandrill-rails
   pg (= 0.17.1)
   rails (= 4.1.0)
