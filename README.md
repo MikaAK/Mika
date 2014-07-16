@@ -1,4 +1,5 @@
-== Personal Porfollio
+Personal Porfollio
+===
 
 ### This Was Created Before Lighthouse Labs (I intend to go back and improve ui/design)
 
